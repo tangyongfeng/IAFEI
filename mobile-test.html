@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>IAFEI - Mobile Test</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Lora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Mobile Test Page Specific Styles */
+        .mobile-test-info {
+            background: #e3f2fd;
+            padding: 1rem;
+            margin: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .mobile-test-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .test-section {
+            margin: 2rem 0;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        
+        .test-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .device-info {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 480px) {
+            .test-buttons {
+                flex-direction: column;
+            }
+            
+            .test-buttons .btn-primary,
+            .test-buttons .btn-secondary {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">💼</div>
+                <a href="index.html" class="logo-text">IAFEI</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">About</a>
+                    <div class="dropdown">
+                        <a href="pages/history.html" class="dropdown-link">History</a>
+                        <a href="pages/officers.html" class="dropdown-link">Officers</a>
+                        <a href="#" class="dropdown-link">By-Laws</a>
+                        <a href="#" class="dropdown-link">Technical Committee</a>
+                        <a href="#" class="dropdown-link">Code of Conduct</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/members.html" class="nav-link">Members</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/news.html" class="nav-link">News & Events</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/publications.html" class="nav-link">Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile Test Content -->
+    <div style="padding-top: 80px;">
+        <div class="mobile-test-info">
+            <h3>📱 Mobile Optimization Test Page</h3>
+            <p>This page is designed to test mobile-specific features and responsive design elements.</p>
+        </div>
+
+        <div class="container">
+            <!-- Device Information -->
+            <div class="test-section">
+                <h3>Device Information</h3>
+                <div class="device-info" id="deviceInfo">
+                    <div>Screen Width: <span id="screenWidth"></span>px</div>
+                    <div>Screen Height: <span id="screenHeight"></span>px</div>
+                    <div>Window Width: <span id="windowWidth"></span>px</div>
+                    <div>Window Height: <span id="windowHeight"></span>px</div>
+                    <div>Device Pixel Ratio: <span id="pixelRatio"></span></div>
+                    <div>Touch Support: <span id="touchSupport"></span></div>
+                    <div>User Agent: <span id="userAgent"></span></div>
+                </div>
+            </div>
+
+            <!-- Navigation Test -->
+            <div class="test-section">
+                <h3>Navigation Test</h3>
+                <p>Test the mobile navigation menu by clicking the hamburger menu (☰) button in the top navigation.</p>
+                <ul>
+                    <li>✅ Mobile menu toggle button should appear on screens ≤ 768px</li>
+                    <li>✅ Menu should slide in from the left</li>
+                    <li>✅ Dropdown menus should work with touch</li>
+                    <li>✅ Menu should close when clicking outside or on links</li>
+                </ul>
+            </div>
+
+            <!-- Touch Interaction Test -->
+            <div class="test-section">
+                <h3>Touch Interaction Test</h3>
+                <p>Test touch interactions with these buttons and cards:</p>
+                <div class="test-buttons">
+                    <button class="btn-primary">Primary Button</button>
+                    <button class="btn-secondary">Secondary Button</button>
+                </div>
+                
+                <div class="card-grid" style="margin-top: 1rem;">
+                    <div class="card">
+                        <h4>Touch Card 1</h4>
+                        <p>This card should respond to touch with a scale animation.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Touch Card 2</h4>
+                        <p>Touch and hold to see the touch feedback effect.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Test -->
+            <div class="test-section">
+                <h3>Mobile Form Test</h3>
+                <form class="contact-form" style="max-width: 500px;">
+                    <div class="form-group">
+                        <label for="testName">Name *</label>
+                        <input type="text" id="testName" name="testName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="testEmail">Email *</label>
+                        <input type="email" id="testEmail" name="testEmail" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="testMessage">Message *</label>
+                        <textarea id="testMessage" name="testMessage" required placeholder="Test the auto-resize feature..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Test Submit</button>
+                </form>
+                
+                <div style="margin-top: 1rem;">
+                    <p><strong>Form Features to Test:</strong></p>
+                    <ul>
+                        <li>✅ Input font size is 16px to prevent iOS zoom</li>
+                        <li>✅ Textarea auto-resizes as you type</li>
+                        <li>✅ Real-time validation with error messages</li>
+                        <li>✅ Touch-friendly button sizes (min 48px height)</li>
+                        <li>✅ Form message appears as toast notification</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Scroll Effects Test -->
+            <div class="test-section">
+                <h3>Scroll Effects Test</h3>
+                <p>Scroll up and down to test these effects:</p>
+                <ul>
+                    <li>✅ Navigation bar should hide when scrolling down (mobile only)</li>
+                    <li>✅ Navigation bar should show when scrolling up</li>
+                    <li>✅ Navigation background should become transparent near top</li>
+                    <li>✅ Elements should animate in when they come into view</li>
+                </ul>
+                
+                <!-- Spacer content to enable scrolling -->
+                <div style="height: 100vh; background: linear-gradient(45deg, #f0f0f0, #e0e0e0); margin: 2rem 0; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                    <div style="text-align: center;">
+                        <h3>Scroll Test Area</h3>
+                        <p>Scroll past this area to test scroll effects</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Animation Test -->
+            <div class="test-section">
+                <h3>Animation Test</h3>
+                <p>These cards should animate in when they come into view:</p>
+                <div class="card-grid">
+                    <div class="card animate-on-scroll">
+                        <h4>Animated Card 1</h4>
+                        <p>This card should fade in from below when scrolling.</p>
+                    </div>
+                    <div class="card animate-on-scroll">
+                        <h4>Animated Card 2</h4>
+                        <p>Animation should be smooth and performant.</p>
+                    </div>
+                    <div class="card animate-on-scroll">
+                        <h4>Animated Card 3</h4>
+                        <p>Works with Intersection Observer API.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performance Test -->
+            <div class="test-section">
+                <h3>Performance Test</h3>
+                <div id="performanceInfo">
+                    <p>Loading performance metrics...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Update device information
+        function updateDeviceInfo() {
+            document.getElementById('screenWidth').textContent = screen.width;
+            document.getElementById('screenHeight').textContent = screen.height;
+            document.getElementById('windowWidth').textContent = window.innerWidth;
+            document.getElementById('windowHeight').textContent = window.innerHeight;
+            document.getElementById('pixelRatio').textContent = window.devicePixelRatio;
+            document.getElementById('touchSupport').textContent = 'ontouchstart' in window ? 'Yes' : 'No';
+            document.getElementById('userAgent').textContent = navigator.userAgent;
+        }
+
+        // Update performance info
+        function updatePerformanceInfo() {
+            const performanceInfo = document.getElementById('performanceInfo');
+            
+            if ('performance' in window) {
+                const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+                const domReady = performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart;
+                
+                performanceInfo.innerHTML = `
+                    <div style="font-family: monospace; font-size: 0.9rem;">
+                        <div>Page Load Time: ${loadTime}ms</div>
+                        <div>DOM Ready Time: ${domReady}ms</div>
+                        <div>Memory Usage: ${navigator.deviceMemory || 'Unknown'} GB</div>
+                        <div>Connection: ${navigator.connection?.effectiveType || 'Unknown'}</div>
+                    </div>
+                `;
+            } else {
+                performanceInfo.innerHTML = '<p>Performance API not supported</p>';
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            updateDeviceInfo();
+            updatePerformanceInfo();
+            
+            // Update device info on resize
+            window.addEventListener('resize', updateDeviceInfo);
+        });
+    </script>
+</body>
+</html>
