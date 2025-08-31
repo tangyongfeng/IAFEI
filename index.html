@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IAFEI - International Association of Financial Executives Institutes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Lora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23003366" width="1200" height="600"/><circle fill="%23B38728" cx="300" cy="150" r="80" opacity="0.3"/><circle fill="%23B38728" cx="900" cy="450" r="100" opacity="0.2"/><rect fill="%23ffffff" x="400" y="200" width="400" height="200" opacity="0.1"/></svg>');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            font-family: var(--heading-font);
+            letter-spacing: 2px;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            font-family: var(--body-font);
+        }
+
+        /* Partners Section */
+        .partners-section {
+            background-color: var(--background-color);
+            padding: 2rem 0;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            align-items: center;
+            text-align: center;
+        }
+
+        .partner-logo {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+            color: var(--primary-color);
+            transition: transform 0.3s;
+        }
+
+        .partner-logo:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Highlights */
+        .highlights-section {
+            background-color: var(--background-color);
+        }
+
+        .highlight-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        /* News Section */
+        .news-section {
+            background-color: var(--white);
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-image {
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .news-content {
+            padding: 1.5rem;
+        }
+
+        .news-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-family: var(--heading-font);
+        }
+
+        .news-excerpt {
+            color: var(--light-gray);
+            line-height: 1.6;
+            font-family: var(--body-font);
+        }
+
+        .news-date {
+            color: #999;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            font-family: var(--body-font);
+            font-style: italic;
+        }
+
+        /* Membership Section */
+        .membership-section {
+            background-color: var(--background-color);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">💼</div>
+                <a href="index.html" class="logo-text">IAFEI</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/about.html" class="nav-link">About</a>
+                    <div class="dropdown">
+                        <a href="pages/history.html" class="dropdown-link">History</a>
+                        <a href="pages/officers.html" class="dropdown-link">Officers</a>
+                        <a href="pages/bylaws.html" class="dropdown-link">By-Laws</a>
+                        <a href="pages/technical-committee.html" class="dropdown-link">Technical Committee</a>
+                        <a href="pages/code-conduct.html" class="dropdown-link">Code of Conduct</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/members.html" class="nav-link">Members</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/news.html" class="nav-link">News & Events</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/publications.html" class="nav-link">Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+        <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>IAFEI World Congress 2025</h1>
+            <p>Advancing Financial Excellence Worldwide</p>
+            <div class="hero-buttons">
+                <a href="pages/news.html" class="btn-primary">Learn More</a>
+                <a href="pages/about.html" class="btn-secondary">About IAFEI</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Partners Section -->
+        <!-- Partners Section -->
+    <section class="section" style="background-color: var(--background-color);">
+        <div class="container">
+            <h2 class="section-title">IAFEI Partners</h2>
+            <div class="partners-grid">
+                <div class="partner-item">
+                    <div class="partner-logo">🏢</div>
+                    <h3>Accenture</h3>
+                    <p>Global management consulting and professional services</p>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">🏛️</div>
+                    <h3>CFE Tax Advisers Europe</h3>
+                    <p>Confederation of European tax adviser organizations</p>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">📊</div>
+                    <h3>Nomura</h3>
+                    <p>Leading financial services group</p>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">📈</div>
+                    <h3>S&P Global</h3>
+                    <p>Credit ratings, benchmarks, analytics and workflow solutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is IAFEI Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">What is IAFEI?</h2>
+            <div class="text-center" style="max-width: 900px; margin: 0 auto;">
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; font-family: var(--body-font);">
+                    The International Association of Financial Executives Institutes (IAFEI) is dedicated to advancing the profession of financial management worldwide. Our mission is to promote excellence in financial leadership, facilitate knowledge exchange, and drive innovation in corporate finance practices.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; font-family: var(--body-font);">
+                    Since our establishment in 1969, IAFEI has been the premier platform for financial executives, CFOs, and organizations to share best practices, discuss emerging trends, and shape the future of financial management across industries and borders.
+                </p>
+                <a href="pages/about.html" class="btn-secondary">Learn About Our History</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- IAFEI 2025 Highlights Section -->
+    <section class="section highlights-section">
+        <div class="container">
+            <h2 class="section-title">IAFEI 2025 Highlights</h2>
+            <p class="section-subtitle">Join us for an exceptional gathering of the world's leading financial minds</p>
+            <div class="card-grid">
+                <div class="card" style="text-align: center;">
+                    <div class="highlight-icon">🎤</div>
+                    <h3>Expert Speakers</h3>
+                    <p>Renowned financial leaders and CFOs presenting on the future of finance, digital transformation, and sustainable business practices.</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <div class="highlight-icon">💡</div>
+                    <h3>Innovation Forum</h3>
+                    <p>Explore cutting-edge financial technologies, ESG reporting, and breakthrough innovations reshaping the finance industry.</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <div class="highlight-icon">🌍</div>
+                    <h3>Global Network</h3>
+                    <p>Connect with financial executives from over 20 countries and leading multinational organizations worldwide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest News Section -->
+    <section class="section news-section">
+        <div class="container">
+            <h2 class="section-title">Latest News</h2>
+            <p class="section-subtitle">Stay updated with the latest developments in financial management</p>
+            <div class="card-grid">
+                <div class="news-card">
+                    <div class="news-image">📊</div>
+                    <div class="news-content">
+                        <div class="news-date">December 15, 2024</div>
+                        <h3 class="news-title">New Financial Reporting Standards</h3>
+                        <p class="news-excerpt">IAFEI announces collaboration with international accounting bodies on enhanced financial reporting standards, focusing on ESG integration and digital disclosure frameworks.</p>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image">💻</div>
+                    <div class="news-content">
+                        <div class="news-date">December 10, 2024</div>
+                        <h3 class="news-title">Digital Finance Transformation Webinar</h3>
+                        <p class="news-excerpt">Join us for a comprehensive session on digital transformation in finance. Expert speakers will discuss AI, blockchain, and the future of financial operations.</p>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image">👥</div>
+                    <div class="news-content">
+                        <div class="news-date">December 5, 2024</div>
+                        <h3 class="news-title">IAFEI Welcomes New Member Institutes</h3>
+                        <p class="news-excerpt">We are pleased to announce new member institutes from emerging markets, strengthening our global financial executive community.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Section -->
+    <section class="section membership-section">
+        <div class="container">
+            <h2 class="section-title">Become a Member</h2>
+            <p class="section-subtitle">Join the leading community in financial management and enjoy exclusive benefits including access to cutting-edge research, networking opportunities, and professional development resources.</p>
+            <a href="pages/members.html" class="btn-primary">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p>Chairman: <a href="mailto:tmannari.iafei@gmail.com">Tsutomu Mannari</a></p>
+                    <p>Secretariat: <a href="mailto:Nobukitaga.iafei@gmail.com">Nobuki Taga</a></p>
+                    <p>Support: <a href="mailto:Ansonkjl.iafei@gmail.com">Anson Kee</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="pages/about.html">About IAFEI</a>
+                    <a href="pages/members.html">Member Institutes</a>
+                    <a href="pages/news.html">News & Events</a>
+                    <a href="pages/publications.html">Publications</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <a href="pages/members.html">Membership</a>
+                    <a href="pages/news.html">World Congress</a>
+                    <a href="pages/publications.html">IAFEI Quarterly</a>
+                    <a href="pages/contact.html">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 International Association of Financial Executives Institutes (IAFEI). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

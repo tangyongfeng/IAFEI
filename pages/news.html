@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Events - IAFEI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Lora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .event-banner {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .event-banner h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-family: var(--heading-font);
+        }
+        
+        .event-date {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+        
+        .news-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            transition: transform 0.3s;
+        }
+        
+        .news-item:hover {
+            transform: translateY(-3px);
+        }
+        
+        .news-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 1.5rem;
+        }
+        
+        .news-body {
+            padding: 2rem;
+        }
+        
+        .news-meta {
+            color: var(--light-gray);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .congress-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .congress-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .congress-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .congress-year {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            font-family: var(--heading-font);
+        }
+        
+        .congress-info {
+            padding: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">💼</div>
+                <a href="../index.html" class="logo-text">IAFEI</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                    <div class="dropdown">
+                        <a href="history.html" class="dropdown-link">History</a>
+                        <a href="officers.html" class="dropdown-link">Officers</a>
+                        <a href="bylaws.html" class="dropdown-link">By-Laws</a>
+                        <a href="technical-committee.html" class="dropdown-link">Technical Committee</a>
+                        <a href="code-conduct.html" class="dropdown-link">Code of Conduct</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="members.html" class="nav-link">Members</a>
+                </li>
+                <li class="nav-item">
+                    <a href="news.html" class="nav-link active">News & Events</a>
+                </li>
+                <li class="nav-item">
+                    <a href="publications.html" class="nav-link">Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>News & Events</h1>
+            <p>Stay informed about IAFEI activities and industry developments</p>
+        </div>
+    </header>
+
+    <!-- Upcoming Event Banner -->
+    <section class="section">
+        <div class="container">
+            <div class="event-banner">
+                <h2>IAFEI World Congress 2025</h2>
+                <div class="event-date">📅 October 15-17, 2025</div>
+                <div class="event-date">📍 Manila, Philippines</div>
+                <p style="margin: 1.5rem 0;">The premier gathering of financial executives from around the world</p>
+                <a href="#congress-info" class="btn-primary" style="background: white; color: var(--primary-color);">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest News -->
+    <section class="section" style="background-color: var(--background-color);">
+        <div class="container">
+            <h2 class="section-title">Latest News</h2>
+            
+            <div class="news-item">
+                <div class="news-header">
+                    <h3>IAFEI Announces 2025 World Congress Theme</h3>
+                </div>
+                <div class="news-body">
+                    <div class="news-meta">January 15, 2025 | Manila, Philippines</div>
+                    <p>IAFEI is pleased to announce that the theme for the 2025 World Congress will be "Digital Finance: Transforming the Future of Financial Leadership." The congress will explore how artificial intelligence, blockchain technology, and digital transformation are reshaping the role of financial executives worldwide.</p>
+                    <p>Expected to attract over 300 financial executives from more than 20 countries, the event will feature keynote presentations from industry leaders, technical sessions on emerging technologies, and networking opportunities for professional development.</p>
+                </div>
+            </div>
+            
+            <div class="news-item">
+                <div class="news-header">
+                    <h3>New ESG Reporting Guidelines Released</h3>
+                </div>
+                <div class="news-body">
+                    <div class="news-meta">December 20, 2024 | Global</div>
+                    <p>IAFEI's Technical Committee has published comprehensive guidelines for Environmental, Social, and Governance (ESG) reporting. These guidelines provide financial executives with practical frameworks for implementing sustainable reporting practices and meeting increasing stakeholder demands for transparency.</p>
+                    <p>The guidelines cover materiality assessment, data collection methodologies, and disclosure best practices, helping organizations navigate the complex landscape of sustainability reporting.</p>
+                </div>
+            </div>
+            
+            <div class="news-item">
+                <div class="news-header">
+                    <h3>Partnership with Global Universities Announced</h3>
+                </div>
+                <div class="news-body">
+                    <div class="news-meta">December 10, 2024 | Global</div>
+                    <p>IAFEI has entered into strategic partnerships with leading business schools worldwide to enhance professional development opportunities for financial executives. The partnerships will facilitate executive education programs, research collaboration, and knowledge exchange.</p>
+                    <p>Initial partners include institutions from Asia, Europe, and the Americas, providing global reach for professional development initiatives.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- World Congress Information -->
+    <section class="section" id="congress-info">
+        <div class="container">
+            <h2 class="section-title">IAFEI World Congress 2025</h2>
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div class="card" style="padding: 3rem; text-align: center;">
+                    <h3 style="color: var(--primary-color); font-size: 2rem; margin-bottom: 2rem;">Digital Finance: Transforming the Future of Financial Leadership</h3>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin: 2rem 0;">
+                        <div>
+                            <strong style="color: var(--primary-color);">Dates</strong>
+                            <p>October 15-17, 2025</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--primary-color);">Location</strong>
+                            <p>Manila, Philippines</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--primary-color);">Expected Attendees</strong>
+                            <p>300+ Financial Executives</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--primary-color);">Countries</strong>
+                            <p>20+ Countries</p>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: left; margin: 2rem 0;">
+                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Key Topics</h4>
+                        <ul style="columns: 2; column-gap: 2rem;">
+                            <li>Artificial Intelligence in Finance</li>
+                            <li>Blockchain and Cryptocurrency</li>
+                            <li>Digital Transformation Strategies</li>
+                            <li>ESG and Sustainable Finance</li>
+                            <li>Risk Management in Digital Era</li>
+                            <li>Future of Financial Reporting</li>
+                            <li>Cybersecurity for Finance Teams</li>
+                            <li>Data Analytics and Decision Making</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="margin-top: 2rem;">
+                        <a href="contact.html" class="btn-primary" style="margin-right: 1rem;">Register Interest</a>
+                        <a href="contact.html" class="btn-secondary">More Information</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Past World Congresses -->
+    <section class="section" style="background-color: var(--background-color);">
+        <div class="container">
+            <h2 class="section-title">Past World Congresses</h2>
+            <div class="congress-grid">
+                <div class="congress-card">
+                    <div class="congress-year">2024</div>
+                    <div class="congress-info">
+                        <h4>São Paulo, Brazil</h4>
+                        <p><strong>Theme:</strong> "Resilient Finance: Navigating Global Uncertainties"</p>
+                        <p>Successfully concluded with 280 participants from 18 countries, focusing on economic resilience and adaptive financial strategies.</p>
+                    </div>
+                </div>
+                
+                <div class="congress-card">
+                    <div class="congress-year">2023</div>
+                    <div class="congress-info">
+                        <h4>Warsaw, Poland</h4>
+                        <p><strong>Theme:</strong> "Innovation in Financial Management"</p>
+                        <p>Explored emerging technologies and their impact on traditional financial practices, with special focus on European markets.</p>
+                    </div>
+                </div>
+                
+                <div class="congress-card">
+                    <div class="congress-year">2022</div>
+                    <div class="congress-info">
+                        <h4>Tokyo, Japan</h4>
+                        <p><strong>Theme:</strong> "Asian Financial Leadership"</p>
+                        <p>Highlighted the growing influence of Asian markets and financial innovations emerging from the region.</p>
+                    </div>
+                </div>
+                
+                <div class="congress-card">
+                    <div class="congress-year">2021</div>
+                    <div class="congress-info">
+                        <h4>Virtual Event</h4>
+                        <p><strong>Theme:</strong> "Finance in the New Normal"</p>
+                        <p>First virtual World Congress, successfully adapted to global pandemic challenges while maintaining high participation.</p>
+                    </div>
+                </div>
+                
+                <div class="congress-card">
+                    <div class="congress-year">2020</div>
+                    <div class="congress-info">
+                        <h4>Milan, Italy</h4>
+                        <p><strong>Theme:</strong> "Sustainable Finance and ESG"</p>
+                        <p>Pioneered discussions on environmental, social, and governance factors in financial decision-making.</p>
+                    </div>
+                </div>
+                
+                <div class="congress-card">
+                    <div class="congress-year">2019</div>
+                    <div class="congress-info">
+                        <h4>Mexico City, Mexico</h4>
+                        <p><strong>Theme:</strong> "50 Years of Financial Excellence"</p>
+                        <p>Celebrated IAFEI's golden anniversary with reflection on achievements and vision for the future.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Upcoming Events</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>CFO Roundtable: AI in Finance</h3>
+                    <p><strong>Date:</strong> March 15, 2025</p>
+                    <p><strong>Format:</strong> Virtual Webinar</p>
+                    <p>Exclusive discussion among CFOs about implementing artificial intelligence in financial operations and decision-making processes.</p>
+                    <a href="contact.html" class="btn-secondary mt-4">Register</a>
+                </div>
+                
+                <div class="card">
+                    <h3>Regional Conference: European Finance</h3>
+                    <p><strong>Date:</strong> June 20-21, 2025</p>
+                    <p><strong>Location:</strong> Frankfurt, Germany</p>
+                    <p>Regional focus on European financial markets, regulatory changes, and cross-border financial management challenges.</p>
+                    <a href="contact.html" class="btn-secondary mt-4">Learn More</a>
+                </div>
+                
+                <div class="card">
+                    <h3>Technical Seminar: ESG Reporting</h3>
+                    <p><strong>Date:</strong> August 10, 2025</p>
+                    <p><strong>Format:</strong> Virtual Workshop</p>
+                    <p>Hands-on workshop covering practical implementation of ESG reporting frameworks and measurement methodologies.</p>
+                    <a href="contact.html" class="btn-secondary mt-4">Register</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p>Email: <a href="mailto:info@iafei.org">info@iafei.org</a></p>
+                    <p>Phone: +63 2 8843 2584</p>
+                    <p>Address: Philippines (Global Secretariat)</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="about.html">About IAFEI</a>
+                    <a href="members.html">Member Institutes</a>
+                    <a href="news.html">News & Events</a>
+                    <a href="publications.html">Publications</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <a href="members.html">Membership</a>
+                    <a href="news.html">World Congress</a>
+                    <a href="publications.html">IAFEI Quarterly</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 International Association of Financial Executives Institutes (IAFEI). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

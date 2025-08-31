@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Officers - IAFEI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Lora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .officer-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .officer-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .officer-photo {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        
+        .officer-name {
+            color: var(--primary-color);
+            font-family: var(--heading-font);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .officer-title {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .officer-institute {
+            color: var(--light-gray);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .executive-committee {
+            background: var(--background-color);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">💼</div>
+                <a href="../index.html" class="logo-text">IAFEI</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                    <div class="dropdown">
+                        <a href="history.html" class="dropdown-link">History</a>
+                        <a href="officers.html" class="dropdown-link">Officers</a>
+                        <a href="bylaws.html" class="dropdown-link">By-Laws</a>
+                        <a href="technical-committee.html" class="dropdown-link">Technical Committee</a>
+                        <a href="code-conduct.html" class="dropdown-link">Code of Conduct</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="members.html" class="nav-link">Members</a>
+                </li>
+                <li class="nav-item">
+                    <a href="news.html" class="nav-link">News & Events</a>
+                </li>
+                <li class="nav-item">
+                    <a href="publications.html" class="nav-link">Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>IAFEI Officers</h1>
+            <p>Leadership of the International Association of Financial Executives Institutes</p>
+        </div>
+    </header>
+
+    <!-- Executive Committee -->
+    <section class="section">
+        <div class="container">
+            <div class="executive-committee">
+                <h2 style="color: var(--primary-color); font-family: var(--heading-font); margin-bottom: 2rem; text-align: center;">2024-2025 Executive Committee</h2>
+                <p style="text-align: center; margin-bottom: 2rem; color: var(--light-gray);">
+                    The Executive Committee provides strategic leadership and governance for IAFEI, representing the diverse global membership and guiding the association's mission to advance financial excellence worldwide.
+                </p>
+            </div>
+            
+            <div class="card-grid">
+                <div class="officer-card">
+                    <div class="officer-photo">TM</div>
+                    <h3 class="officer-name">Tsutomu Mannari</h3>
+                    <div class="officer-title">Chairman</div>
+                    <div class="officer-institute">JACFO - Japan</div>
+                    <p>Leading IAFEI's strategic initiatives and global expansion efforts with extensive experience in Japanese financial markets and international finance.</p>
+                </div>
+                
+                <div class="officer-card">
+                    <div class="officer-photo">DH</div>
+                    <h3 class="officer-name">Duong Hai</h3>
+                    <div class="officer-title">Vice Chairman</div>
+                    <div class="officer-institute">VCFO - Vietnam</div>
+                    <p>Expert in emerging markets finance and regional development, leading IAFEI's expansion in Southeast Asia.</p>
+                </div>
+                
+                <div class="officer-card">
+                    <div class="officer-photo">HO</div>
+                    <h3 class="officer-name">Hideki Oba</h3>
+                    <div class="officer-title">Secretary</div>
+                    <div class="officer-institute">JACFO - Japan</div>
+                    <p>Overseeing IAFEI's administrative operations and member communications with expertise in corporate governance.</p>
+                </div>
+                
+                <div class="officer-card">
+                    <div class="officer-photo">AC</div>
+                    <h3 class="officer-name">Abelardo Cortez</h3>
+                    <div class="officer-title">Treasurer</div>
+                    <div class="officer-institute">FINEX - Philippines</div>
+                    <p>Managing IAFEI's financial operations with extensive experience in international treasury management and financial planning.</p>
+                </div>
+                
+                <div class="officer-card">
+                    <div class="officer-photo">JW</div>
+                    <h3 class="officer-name">Jennifer Wang</h3>
+                    <div class="officer-title">Area President for Asia</div>
+                    <div class="officer-institute">FEI - Chinese Taiwan</div>
+                    <p>Coordinating IAFEI activities across Asian member institutes and promoting regional financial collaboration.</p>
+                </div>
+                
+                <div class="officer-card">
+                    <div class="officer-photo">CM</div>
+                    <h3 class="officer-name">Conchita Manabat</h3>
+                    <div class="officer-title">Chairperson of Advisory Council</div>
+                    <div class="officer-institute">FINEX - Philippines</div>
+                    <p>Former IAFEI Chairman (2005-2006), providing strategic guidance and institutional memory to the organization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regional Directors -->
+    <section class="section" style="background-color: var(--background-color);">
+        <div class="container">
+            <h2 class="section-title">Regional Directors</h2>
+            <div class="card-grid">
+                <div class="officer-card">
+                    <div class="officer-photo">🌏</div>
+                    <h3 class="officer-name">Asia-Pacific Region</h3>
+                    <div class="officer-title">Dr. Li Wei</div>
+                    <div class="officer-institute">CACFO - China</div>
+                    <p>Coordinating activities across Asian member institutes and promoting regional collaboration in financial management.</p>
+                </div>
+                
+                <div class="officer-card">
+                    <div class="officer-photo">🇪🇺</div>
+                    <h3 class="officer-name">European Region</h3>
+                    <div class="officer-title">Jean Michel Dubois</div>
+                    <div class="officer-institute">DFCG - France</div>
+                    <p>Overseeing European member institutes and representing IAFEI in European financial regulatory discussions.</p>
+                </div>
+                
+                <div class="officer-card">
+                    <div class="officer-photo">🌎</div>
+                    <h3 class="officer-name">Americas Region</h3>
+                    <div class="officer-title">Dr. Maria Rodriguez</div>
+                    <div class="officer-institute">IMEF - Mexico</div>
+                    <p>Coordinating activities across North and South American member institutes and promoting regional financial innovation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Committee Chairs -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Committee Chairs</h2>
+            <div class="card-grid">
+                <div class="officer-card">
+                    <div class="officer-photo">TC</div>
+                    <h3 class="officer-name">Technical Committee</h3>
+                    <div class="officer-title">Dr. Klaus Schmidt</div>
+                    <div class="officer-institute">GEFIU - Germany</div>
+                    <p>Leading development of professional standards and technical guidance for financial executives worldwide.</p>
+                </div>
+                
+                <div class="officer-card">
+                    <div class="officer-photo">EC</div>
+                    <h3 class="officer-name">Ethics Committee</h3>
+                    <div class="officer-title">Prof. Anna Rossi</div>
+                    <div class="officer-institute">ANDAF - Italy</div>
+                    <p>Developing and maintaining ethical standards and professional conduct guidelines for the financial profession.</p>
+                </div>
+                
+                <div class="officer-card">
+                    <div class="officer-photo">PC</div>
+                    <h3 class="officer-name">Publications Committee</h3>
+                    <div class="officer-title">Dr. Robert Chen</div>
+                    <div class="officer-institute">TAFEI - Taiwan</div>
+                    <p>Overseeing IAFEI's research publications and knowledge dissemination initiatives across global markets.</p>
+                </div>
+                
+                <div class="officer-card">
+                    <div class="officer-photo">MC</div>
+                    <h3 class="officer-name">Membership Committee</h3>
+                    <div class="officer-title">Sarah Thompson</div>
+                    <div class="officer-institute">FINEX - Philippines</div>
+                    <p>Managing membership development and engagement strategies to expand IAFEI's global reach and impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Governance Structure -->
+    <section class="section" style="background-color: var(--background-color);">
+        <div class="container">
+            <h2 class="section-title">Governance Structure</h2>
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div class="card" style="padding: 3rem;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 2rem; text-align: center;">IAFEI Organizational Structure</h3>
+                    
+                    <div style="display: grid; gap: 2rem;">
+                        <div style="text-align: center; padding: 1.5rem; background: var(--background-color); border-radius: 8px;">
+                            <strong style="color: var(--primary-color);">Board of Directors</strong>
+                            <p>Representatives from all member institutes providing strategic oversight and policy guidance</p>
+                        </div>
+                        
+                        <div style="text-align: center; padding: 1.5rem; background: var(--background-color); border-radius: 8px;">
+                            <strong style="color: var(--primary-color);">Executive Committee</strong>
+                            <p>Elected officers responsible for day-to-day management and strategic implementation</p>
+                        </div>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                            <div style="text-align: center; padding: 1rem; background: var(--background-color); border-radius: 8px;">
+                                <strong style="color: var(--accent-color);">Technical Committee</strong>
+                                <p>Professional standards and guidance</p>
+                            </div>
+                            <div style="text-align: center; padding: 1rem; background: var(--background-color); border-radius: 8px;">
+                                <strong style="color: var(--accent-color);">Regional Directors</strong>
+                                <p>Geographic coordination</p>
+                            </div>
+                            <div style="text-align: center; padding: 1rem; background: var(--background-color); border-radius: 8px;">
+                                <strong style="color: var(--accent-color);">Working Committees</strong>
+                                <p>Specialized focus areas</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <p style="color: var(--light-gray); font-style: italic;">
+                            Officers serve three-year terms and are elected by the Board of Directors representing member institutes worldwide.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p>Email: <a href="mailto:info@iafei.org">info@iafei.org</a></p>
+                    <p>Phone: +63 2 8843 2584</p>
+                    <p>Address: Philippines (Global Secretariat)</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="about.html">About IAFEI</a>
+                    <a href="members.html">Member Institutes</a>
+                    <a href="news.html">News & Events</a>
+                    <a href="publications.html">Publications</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <a href="members.html">Membership</a>
+                    <a href="news.html">World Congress</a>
+                    <a href="publications.html">IAFEI Quarterly</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 International Association of Financial Executives Institutes (IAFEI). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

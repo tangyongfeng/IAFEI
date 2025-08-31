@@ -1,0 +1,36 @@
+# 忽略设计相关的临时文件
+设计稿.html
+工作方案.md
+设计概要.md
+
+# 忽略 Uizard 预览文件
+Preview*
+*_files/
+
+# 忽略系统文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 忽略IDE文件
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 忽略临时文件
+*.tmp
+*.temp
+*~
+
+# 忽略日志文件
+*.log
+
+# 忽略打包文件
+*.zip
+*.tar.gz
+*.rar

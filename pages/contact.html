@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - IAFEI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Lora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .contact-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid var(--border-color);
+            border-radius: 6px;
+            font-family: var(--body-font);
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .contact-info {
+            background: var(--background-color);
+            padding: 2rem;
+            border-radius: 12px;
+            height: fit-content;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .office-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+        
+        .office-flag {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">💼</div>
+                <a href="../index.html" class="logo-text">IAFEI</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                    <div class="dropdown">
+                        <a href="history.html" class="dropdown-link">History</a>
+                        <a href="officers.html" class="dropdown-link">Officers</a>
+                        <a href="bylaws.html" class="dropdown-link">By-Laws</a>
+                        <a href="technical-committee.html" class="dropdown-link">Technical Committee</a>
+                        <a href="code-conduct.html" class="dropdown-link">Code of Conduct</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="members.html" class="nav-link">Members</a>
+                </li>
+                <li class="nav-item">
+                    <a href="news.html" class="nav-link">News & Events</a>
+                </li>
+                <li class="nav-item">
+                    <a href="publications.html" class="nav-link">Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Contact IAFEI</h1>
+            <p>Get in touch with our global secretariat and regional offices</p>
+        </div>
+    </header>
+
+    <!-- Contact Form Section -->
+    <section class="section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; align-items: start;">
+                <div>
+                    <h2 style="color: var(--primary-color); font-family: var(--heading-font); margin-bottom: 2rem;">Send us a Message</h2>
+                    <form class="contact-form">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="organization">Organization</label>
+                            <input type="text" id="organization" name="organization">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <select id="country" name="country">
+                                <option value="">Select your country</option>
+                                <option value="argentina">Argentina</option>
+                                <option value="brazil">Brazil</option>
+                                <option value="cambodia">Cambodia</option>
+                                <option value="china">China</option>
+                                <option value="taiwan">Chinese Taiwan</option>
+                                <option value="france">France</option>
+                                <option value="germany">Germany</option>
+                                <option value="greece">Greece</option>
+                                <option value="italy">Italy</option>
+                                <option value="japan">Japan</option>
+                                <option value="mexico">Mexico</option>
+                                <option value="philippines">Philippines</option>
+                                <option value="poland">Poland</option>
+                                <option value="russia">Russia</option>
+                                <option value="vietnam">Vietnam</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="membership">Membership Inquiry</option>
+                                <option value="congress">World Congress Information</option>
+                                <option value="publications">Publications & Subscriptions</option>
+                                <option value="partnership">Partnership Opportunities</option>
+                                <option value="media">Media Inquiry</option>
+                                <option value="general">General Information</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" placeholder="Please provide details about your inquiry..." required></textarea>
+                        </div>
+                        
+                        <div style="text-align: center; margin-top: 2rem;">
+                            <button type="submit" class="btn-primary">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <h3 style="color: var(--primary-color); font-family: var(--heading-font); margin-bottom: 2rem;">Contact Information</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <strong>IAFEI Chairman</strong>
+                            <p>Tsutomu Mannari</p>
+                            <p>tmannari.iafei@gmail.com</p>
+                            <p style="font-size: 0.9rem; color: var(--light-gray);">Leadership and strategic inquiries</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <strong>IAFEI Secretariat</strong>
+                            <p>Nobuki Taga - Head of Secretariat</p>
+                            <p>Nobukitaga.iafei@gmail.com</p>
+                            <p style="font-size: 0.9rem; color: var(--light-gray);">Administrative and membership inquiries</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">🏢</div>
+                        <div>
+                            <strong>Global Secretariat</strong>
+                            <p>Financial Executives Institute of the Philippines (FINEX)</p>
+                            <p>Manila, Philippines</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">⏰</div>
+                        <div>
+                            <strong>Response Time</strong>
+                            <p>We typically respond within 24-48 hours during business days.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regional Offices -->
+    <section class="section" style="background-color: var(--background-color);">
+        <div class="container">
+            <h2 class="section-title">Regional Presence</h2>
+            <p class="section-subtitle">IAFEI operates through member institutes across multiple regions</p>
+            
+            <div class="card-grid">
+                <div class="office-card">
+                    <div class="office-flag">🌏</div>
+                    <h3>Asia-Pacific</h3>
+                    <p><strong>Primary Contacts:</strong></p>
+                    <p>FINEX (Philippines)<br>JACFO (Japan)<br>CACFO (China)<br>VCFO (Vietnam)</p>
+                    <p style="margin-top: 1rem; color: var(--light-gray);">Covering East Asia, Southeast Asia, and Pacific regions</p>
+                </div>
+                
+                <div class="office-card">
+                    <div class="office-flag">🇪🇺</div>
+                    <h3>Europe</h3>
+                    <p><strong>Primary Contacts:</strong></p>
+                    <p>DFCG (France)<br>GEFIU (Germany)<br>ANDAF (Italy)<br>FINEXA (Poland)</p>
+                    <p style="margin-top: 1rem; color: var(--light-gray);">Covering European Union and surrounding regions</p>
+                </div>
+                
+                <div class="office-card">
+                    <div class="office-flag">🌎</div>
+                    <h3>Americas</h3>
+                    <p><strong>Primary Contacts:</strong></p>
+                    <p>IMEF (Mexico)<br>IAEF (Argentina)<br>IBEF (Brazil)</p>
+                    <p style="margin-top: 1rem; color: var(--light-gray);">Covering North, Central, and South America</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Frequently Asked Questions -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div style="display: grid; gap: 2rem;">
+                    <div style="border-left: 4px solid var(--accent-color); padding-left: 2rem;">
+                        <h3 style="color: var(--primary-color); font-family: var(--heading-font); margin-bottom: 1rem;">How can I become a member of IAFEI?</h3>
+                        <p>IAFEI membership is through national or regional member institutes. If your country has a member institute, you can join through them. If not, contact us about establishing a new member institute in your region.</p>
+                    </div>
+                    
+                    <div style="border-left: 4px solid var(--accent-color); padding-left: 2rem;">
+                        <h3 style="color: var(--primary-color); font-family: var(--heading-font); margin-bottom: 1rem;">When and where is the next World Congress?</h3>
+                        <p>The IAFEI World Congress 2025 will be held October 15-17, 2025, in Manila, Philippines. The theme is "Digital Finance: Transforming the Future of Financial Leadership."</p>
+                    </div>
+                    
+                    <div style="border-left: 4px solid var(--accent-color); padding-left: 2rem;">
+                        <h3 style="color: var(--primary-color); font-family: var(--heading-font); margin-bottom: 1rem;">How can I access IAFEI publications?</h3>
+                        <p>IAFEI publications are available to members through our digital platform. Non-members can subscribe to specific publications or request access through their local member institute.</p>
+                    </div>
+                    
+                    <div style="border-left: 4px solid var(--accent-color); padding-left: 2rem;">
+                        <h3 style="color: var(--primary-color); font-family: var(--heading-font); margin-bottom: 1rem;">Does IAFEI offer professional certifications?</h3>
+                        <p>IAFEI works with member institutes to provide professional development and certification programs. Contact your local member institute or our secretariat for specific certification opportunities.</p>
+                    </div>
+                    
+                    <div style="border-left: 4px solid var(--accent-color); padding-left: 2rem;">
+                        <h3 style="color: var(--primary-color); font-family: var(--heading-font); margin-bottom: 1rem;">Can I submit articles for IAFEI publications?</h3>
+                        <p>Yes, we welcome contributions from financial professionals worldwide. Please review our editorial guidelines and submission process by contacting our publications team.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="section" style="background-color: var(--background-color);">
+        <div class="container">
+            <div style="text-align: center;">
+                <h2 class="section-title">Quick Links</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; max-width: 800px; margin: 0 auto;">
+                    <a href="members.html" class="btn-secondary">Find Your Local Institute</a>
+                    <a href="news.html" class="btn-secondary">World Congress 2025</a>
+                    <a href="publications.html" class="btn-secondary">Subscribe to Publications</a>
+                    <a href="about.html" class="btn-secondary">About IAFEI</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p>Email: <a href="mailto:info@iafei.org">info@iafei.org</a></p>
+                    <p>Phone: +63 2 8843 2584</p>
+                    <p>Address: Philippines (Global Secretariat)</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="about.html">About IAFEI</a>
+                    <a href="members.html">Member Institutes</a>
+                    <a href="news.html">News & Events</a>
+                    <a href="publications.html">Publications</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <a href="members.html">Membership</a>
+                    <a href="news.html">World Congress</a>
+                    <a href="publications.html">IAFEI Quarterly</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 International Association of Financial Executives Institutes (IAFEI). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
