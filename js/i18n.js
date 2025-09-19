@@ -24,10 +24,10 @@ class I18nManager {
     async init() {
         try {
             // 检测用户首选语言
-            this.currentLanguageuage = this.detectLanguage();
+            this.currentLanguage = this.detectLanguage();
             
             // 加载翻译文件
-            await this.loadTranslations(this.currentLanguageuage);
+            await this.loadTranslations(this.currentLanguage);
             
             // 应用翻译
             this.applyTranslations();
@@ -38,11 +38,11 @@ class I18nManager {
             // 初始化语言切换器
             this.initLanguageSelector();
             
-            console.log(`✅ i18n initialized with language: ${this.currentLanguageuage}`);
+            console.log(`✅ i18n initialized with language: ${this.currentLanguage}`);
         } catch (error) {
             console.error('❌ i18n initialization failed:', error);
             // 使用默认语言作为后备
-            if (this.currentLanguageuage !== this.fallbackLang) {
+            if (this.currentLanguage !== this.fallbackLang) {
                 await this.switchLanguage(this.fallbackLang);
             }
         }
@@ -166,7 +166,7 @@ class I18nManager {
             return;
         }
 
-        console.log('Applying translations for language:', this.currentLanguageuage);
+        console.log('Applying translations for language:', this.currentLanguage);
 
         // Update all elements with data-i18n attribute
         const elements = document.querySelectorAll('[data-i18n]');
@@ -342,9 +342,10 @@ class I18nManager {
      */
     initLanguageSelector() {
         // 检查页面中是否已有语言选择器
-        const existingSelector = document.getElementById('languageSelector');
+        const existingButton = document.getElementById('languageBtn');
+        const existingDropdown = document.getElementById('languageDropdown');
         
-        if (existingSelector) {
+        if (existingButton && existingDropdown) {
             // 使用现有的语言选择器
             this.bindExistingLanguageSelectorEvents();
             this.updateLanguageSelectorDisplay();
@@ -362,12 +363,26 @@ class I18nManager {
     bindExistingLanguageSelectorEvents() {
         const languageBtn = document.getElementById('languageBtn');
         const dropdown = document.getElementById('languageDropdown');
+        
+        if (!languageBtn || !dropdown) {
+            console.error('❌ Language selector elements not found');
+            return;
+        }
+        
         const options = dropdown.querySelectorAll('.language-option');
+        
+        if (options.length === 0) {
+            console.error('❌ No language options found');
+            return;
+        }
+        
+        console.log('🔗 Binding language selector events...');
         
         // 切换下拉菜单
         languageBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             dropdown.classList.toggle('show');
+            console.log('🖱️ Language button clicked, dropdown toggled');
         });
         
         // 点击外部关闭下拉菜单
@@ -381,21 +396,26 @@ class I18nManager {
         options.forEach(option => {
             option.addEventListener('click', async (e) => {
                 const lang = e.target.getAttribute('data-lang');
+                console.log(`🔄 Language option clicked: ${lang}`);
+                
                 if (lang && lang !== this.currentLanguage) {
+                    console.log(`🌍 Switching to language: ${lang}`);
                     await this.setLanguage(lang);
                     dropdown.classList.remove('show');
+                } else {
+                    console.log(`⚠️ Same language or invalid: current=${this.currentLanguage}, new=${lang}`);
                 }
             });
         });
         
-        console.log('✅ Language selector events bound');
+        console.log('✅ Language selector events bound successfully');
     }
 
     /**
      * 更新语言选择器显示
      */
     updateLanguageSelectorDisplay() {
-        const currentLanguageSpan = document.getElementById('currentLanguage');
+        const currentLanguageSpan = document.getElementById('currentLanguageText');
         const options = document.querySelectorAll('.language-option');
         
         if (currentLanguageSpan) {

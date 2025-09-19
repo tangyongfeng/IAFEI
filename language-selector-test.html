@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Selector Debug Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        
+        /* Language Selector Styles */
+        .language-selector {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+            font-family: Arial, sans-serif;
+        }
+
+        .language-btn {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            transition: all 0.3s ease;
+            min-width: 120px;
+            justify-content: space-between;
+        }
+
+        .language-btn:hover {
+            background: #1d4ed8;
+            box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+            transform: translateY(-1px);
+        }
+
+        .globe-icon {
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+            fill: currentColor;
+        }
+
+        .dropdown-arrow {
+            width: 0;
+            height: 0;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 4px solid currentColor;
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .language-dropdown {
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            margin-bottom: 8px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            min-width: 180px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .language-dropdown.open {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .language-option {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            font-size: 14px;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+        }
+
+        .language-option:hover {
+            background-color: #f3f4f6;
+        }
+
+        .language-option.active {
+            background-color: #eff6ff;
+            color: #2563eb;
+            font-weight: 500;
+        }
+
+        .flag-icon {
+            width: 20px;
+            height: 15px;
+            margin-right: 12px;
+            border-radius: 2px;
+            object-fit: cover;
+        }
+
+        .debug-info {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .test-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        
+        .status.success {
+            background: #d1fae5;
+            color: #065f46;
+            border: 1px solid #a7f3d0;
+        }
+        
+        .status.error {
+            background: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #fca5a5;
+        }
+        
+        .status.info {
+            background: #dbeafe;
+            color: #1e40af;
+            border: 1px solid #93c5fd;
+        }
+    </style>
+</head>
+<body>
+    <div class="debug-info">
+        <h2>Language Selector Debug Test</h2>
+        <div id="debug-log"></div>
+        <button onclick="runDebugTests()">Run Debug Tests</button>
+        <button onclick="clearDebugLog()">Clear Log</button>
+    </div>
+
+    <div class="test-content">
+        <h1 data-i18n="nav.home">Welcome to IAFEI</h1>
+        <p data-i18n="homepage.intro">This is a test page for debugging the language selector.</p>
+        <p>Current Language: <span id="current-lang">Not set</span></p>
+        <p>Available Languages: <span id="available-langs">Loading...</span></p>
+    </div>
+
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <button class="language-btn" id="languageBtn">
+            <svg class="globe-icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z" clip-rule="evenodd"/>
+            </svg>
+            <span id="currentLanguageText">English</span>
+            <div class="dropdown-arrow"></div>
+        </button>
+        
+        <div class="language-dropdown" id="languageDropdown">
+            <button class="language-option" data-lang="en">
+                <span class="flag-icon">🇺🇸</span>
+                English
+            </button>
+            <button class="language-option" data-lang="zh-cn">
+                <span class="flag-icon">🇨🇳</span>
+                简体中文
+            </button>
+            <button class="language-option" data-lang="zh-tw">
+                <span class="flag-icon">🇹🇼</span>
+                繁體中文
+            </button>
+            <button class="language-option" data-lang="ja">
+                <span class="flag-icon">🇯🇵</span>
+                日本語
+            </button>
+            <button class="language-option" data-lang="de">
+                <span class="flag-icon">🇩🇪</span>
+                Deutsch
+            </button>
+            <button class="language-option" data-lang="it">
+                <span class="flag-icon">🇮🇹</span>
+                Italiano
+            </button>
+        </div>
+    </div>
+
+    <script src="js/i18n.js"></script>
+    <script>
+        let debugLog = [];
+        
+        function addDebugLog(message, type = 'info') {
+            const timestamp = new Date().toLocaleTimeString();
+            debugLog.push({ timestamp, message, type });
+            updateDebugDisplay();
+            console.log(`[${timestamp}] ${message}`);
+        }
+        
+        function updateDebugDisplay() {
+            const debugDiv = document.getElementById('debug-log');
+            debugDiv.innerHTML = debugLog.map(log => 
+                `<div class="status ${log.type}">[${log.timestamp}] ${log.message}</div>`
+            ).join('');
+            debugDiv.scrollTop = debugDiv.scrollHeight;
+        }
+        
+        function clearDebugLog() {
+            debugLog = [];
+            updateDebugDisplay();
+        }
+        
+        function runDebugTests() {
+            addDebugLog('Starting debug tests...', 'info');
+            
+            // Test 1: Check if elements exist
+            const languageBtn = document.getElementById('languageBtn');
+            const dropdown = document.getElementById('languageDropdown');
+            const options = document.querySelectorAll('.language-option');
+            
+            addDebugLog(`Language button found: ${!!languageBtn}`, languageBtn ? 'success' : 'error');
+            addDebugLog(`Dropdown found: ${!!dropdown}`, dropdown ? 'success' : 'error');
+            addDebugLog(`Language options found: ${options.length}`, options.length > 0 ? 'success' : 'error');
+            
+            // Test 2: Check if i18n manager exists
+            addDebugLog(`I18n manager exists: ${!!window.i18n}`, window.i18n ? 'success' : 'error');
+            
+            // Test 3: Check event listeners
+            if (languageBtn) {
+                const events = getEventListeners ? getEventListeners(languageBtn) : 'Cannot check (getEventListeners not available)';
+                addDebugLog(`Button event listeners: ${typeof events === 'object' ? Object.keys(events).join(', ') : events}`, 'info');
+                
+                // Manually test click
+                addDebugLog('Testing manual click on button...', 'info');
+                languageBtn.click();
+            }
+            
+            // Test 4: Check CSS classes
+            if (dropdown) {
+                addDebugLog(`Dropdown is open: ${dropdown.classList.contains('open')}`, 'info');
+            }
+        }
+        
+        // Initialize when DOM is ready
+        document.addEventListener('DOMContentLoaded', async function() {
+            addDebugLog('DOM content loaded', 'success');
+            
+            try {
+                // Initialize i18n
+                window.i18n = new I18nManager();
+                await window.i18n.init();
+                addDebugLog('I18n manager initialized successfully', 'success');
+                
+                // Update current language display
+                const currentLang = localStorage.getItem('preferredLanguage') || 'en';
+                document.getElementById('current-lang').textContent = currentLang;
+                
+                // Update available languages
+                if (window.i18n && window.i18n.languages) {
+                    document.getElementById('available-langs').textContent = Object.keys(window.i18n.languages).join(', ');
+                }
+                
+            } catch (error) {
+                addDebugLog(`Failed to initialize i18n: ${error.message}`, 'error');
+            }
+        });
+        
+        // Add manual event listeners for testing
+        document.addEventListener('click', function(e) {
+            addDebugLog(`Click detected on: ${e.target.tagName} ${e.target.className} ${e.target.id}`, 'info');
+        });
+    </script>
+</body>
+</html>
