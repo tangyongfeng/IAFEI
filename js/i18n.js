@@ -4,7 +4,7 @@
  */
 class I18nManager {
     constructor() {
-        this.currentLang = 'en'; // 默认语言
+        this.currentLanguageuage = 'en'; // 默认语言
         this.translations = {};
         this.supportedLanguages = {
             'en': 'English',
@@ -24,10 +24,10 @@ class I18nManager {
     async init() {
         try {
             // 检测用户首选语言
-            this.currentLang = this.detectLanguage();
+            this.currentLanguageuage = this.detectLanguage();
             
             // 加载翻译文件
-            await this.loadTranslations(this.currentLang);
+            await this.loadTranslations(this.currentLanguageuage);
             
             // 应用翻译
             this.applyTranslations();
@@ -38,11 +38,11 @@ class I18nManager {
             // 初始化语言切换器
             this.initLanguageSelector();
             
-            console.log(`✅ i18n initialized with language: ${this.currentLang}`);
+            console.log(`✅ i18n initialized with language: ${this.currentLanguageuage}`);
         } catch (error) {
             console.error('❌ i18n initialization failed:', error);
             // 使用默认语言作为后备
-            if (this.currentLang !== this.fallbackLang) {
+            if (this.currentLanguageuage !== this.fallbackLang) {
                 await this.switchLanguage(this.fallbackLang);
             }
         }
@@ -108,13 +108,17 @@ class I18nManager {
         this.isLoading = true;
         
         try {
-            const response = await fetch(`./lang/${lang}.json`);
+            // 根据当前页面路径调整翻译文件路径
+            const currentPath = window.location.pathname;
+            const basePath = currentPath.includes('/pages/') ? '../lang/' : 'lang/';
+            
+            const response = await fetch(`${basePath}${lang}.json`);
             if (!response.ok) {
                 throw new Error(`Failed to load translations for ${lang}: ${response.status}`);
             }
             
             this.translations = await response.json();
-            console.log(`📄 Loaded translations for: ${lang}`);
+            console.log(`📄 Loaded translations for: ${lang} from ${basePath}${lang}.json`);
             
         } catch (error) {
             console.error(`❌ Error loading translations for ${lang}:`, error);
@@ -122,7 +126,9 @@ class I18nManager {
             // 如果不是后备语言，尝试加载后备语言
             if (lang !== this.fallbackLang) {
                 console.log(`🔄 Falling back to ${this.fallbackLang}`);
-                const fallbackResponse = await fetch(`./lang/${this.fallbackLang}.json`);
+                const currentPath = window.location.pathname;
+                const basePath = currentPath.includes('/pages/') ? '../lang/' : 'lang/';
+                const fallbackResponse = await fetch(`${basePath}${this.fallbackLang}.json`);
                 this.translations = await fallbackResponse.json();
             } else {
                 throw error;
@@ -160,7 +166,7 @@ class I18nManager {
             return;
         }
 
-        console.log('Applying translations for language:', this.currentLanguage);
+        console.log('Applying translations for language:', this.currentLanguageuage);
 
         // Update all elements with data-i18n attribute
         const elements = document.querySelectorAll('[data-i18n]');
@@ -225,7 +231,7 @@ class I18nManager {
         }
 
         // Update html lang attribute
-        document.documentElement.setAttribute('lang', this.currentLanguage);
+        document.documentElement.setAttribute('lang', this.currentLanguageuage);
     }
 
     getPageName() {
@@ -242,11 +248,11 @@ class I18nManager {
      * 更新HTML语言属性
      */
     updateHtmlLang() {
-        const htmlLang = this.translations.meta?.htmlLang || this.currentLang;
+        const htmlLang = this.translations.meta?.htmlLang || this.currentLanguage;
         document.documentElement.lang = htmlLang;
         
         // 更新文档方向（如果需要）
-        const isRTL = ['ar', 'he', 'fa'].includes(this.currentLang);
+        const isRTL = ['ar', 'he', 'fa'].includes(this.currentLanguage);
         document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
     }
 
@@ -259,7 +265,7 @@ class I18nManager {
             return;
         }
 
-        if (newLang === this.currentLang) {
+        if (newLang === this.currentLanguage) {
             return;
         }
 
@@ -271,7 +277,7 @@ class I18nManager {
             await this.loadTranslations(newLang);
             
             // 更新当前语言
-            this.currentLang = newLang;
+            this.currentLanguage = newLang;
             
             // 保存到localStorage
             localStorage.setItem('iafei-language', newLang);
@@ -322,12 +328,12 @@ class I18nManager {
         selector.innerHTML = `
             <button class="language-toggle" aria-label="${this.t('common.language', 'Language')}" title="${this.t('common.language', 'Language')}">
                 <span class="language-icon">🌐</span>
-                <span class="language-current">${this.supportedLanguages[this.currentLang]}</span>
+                <span class="language-current">${this.supportedLanguages[this.currentLanguage]}</span>
                 <span class="language-arrow">▼</span>
             </button>
             <div class="language-dropdown">
                 ${Object.entries(this.supportedLanguages).map(([code, name]) => `
-                    <button class="language-option ${code === this.currentLang ? 'active' : ''}" 
+                    <button class="language-option ${code === this.currentLanguage ? 'active' : ''}" 
                             data-lang="${code}" 
                             aria-label="${name}">
                         ${name}
@@ -379,12 +385,12 @@ class I18nManager {
         const options = document.querySelectorAll('.language-option');
         
         if (currentSpan) {
-            currentSpan.textContent = this.supportedLanguages[this.currentLang];
+            currentSpan.textContent = this.supportedLanguages[this.currentLanguage];
         }
         
         options.forEach(option => {
             const lang = option.getAttribute('data-lang');
-            option.classList.toggle('active', lang === this.currentLang);
+            option.classList.toggle('active', lang === this.currentLanguage);
         });
     }
 
@@ -416,7 +422,7 @@ class I18nManager {
     dispatchLanguageChangeEvent(newLang) {
         const event = new CustomEvent('languageChanged', {
             detail: {
-                oldLang: this.currentLang,
+                oldLang: this.currentLanguage,
                 newLang: newLang,
                 translations: this.translations
             }
@@ -428,7 +434,7 @@ class I18nManager {
      * 获取当前语言
      */
     getCurrentLanguage() {
-        return this.currentLang;
+        return this.currentLanguage;
     }
 
     /**
