@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件测试 - Event Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .test-section {
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+        }
+        
+        .language-selector {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .language-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .language-btn:hover {
+            background: #0056b3;
+        }
+        
+        .language-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            min-width: 200px;
+            display: none;
+            z-index: 1000;
+        }
+        
+        .language-dropdown.open {
+            display: block;
+        }
+        
+        .language-option {
+            padding: 10px 15px;
+            cursor: pointer;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .language-option:hover {
+            background: #f5f5f5;
+        }
+        
+        .language-option:last-child {
+            border-bottom: none;
+        }
+        
+        .console-output {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            max-height: 300px;
+            overflow-y: auto;
+            margin-top: 15px;
+        }
+        
+        button {
+            margin: 5px;
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .success { color: green; }
+        .error { color: red; }
+        .info { color: blue; }
+    </style>
+</head>
+<body>
+    <h1>语言选择器事件测试</h1>
+    
+    <div class="test-section">
+        <h2>1. 手动事件绑定测试</h2>
+        <p>这个测试将手动添加事件监听器到语言按钮</p>
+        
+        <div class="language-selector">
+            <button id="testLanguageBtn" class="language-btn">
+                选择语言 ▼
+            </button>
+            <div id="testLanguageDropdown" class="language-dropdown">
+                <div class="language-option" data-lang="en">English</div>
+                <div class="language-option" data-lang="zh-cn">简体中文</div>
+                <div class="language-option" data-lang="zh-tw">繁體中文</div>
+                <div class="language-option" data-lang="ja">日本語</div>
+                <div class="language-option" data-lang="ko">한국어</div>
+                <div class="language-option" data-lang="es">Español</div>
+            </div>
+        </div>
+        
+        <div>
+            <button onclick="testManualBinding()">测试手动绑定</button>
+            <button onclick="clearConsole()">清空控制台</button>
+        </div>
+        
+        <div id="console1" class="console-output"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>2. i18n.js 事件绑定测试</h2>
+        <p>这个测试将使用 i18n.js 的事件绑定方法</p>
+        
+        <div class="language-selector">
+            <button id="languageBtn" class="language-btn">
+                选择语言 ▼
+            </button>
+            <div id="languageDropdown" class="language-dropdown">
+                <div class="language-option" data-lang="en">English</div>
+                <div class="language-option" data-lang="zh-cn">简体中文</div>
+                <div class="language-option" data-lang="zh-tw">繁體中文</div>
+                <div class="language-option" data-lang="ja">日本語</div>
+                <div class="language-option" data-lang="ko">한국어</div>
+                <div class="language-option" data-lang="es">Español</div>
+            </div>
+        </div>
+        
+        <div>
+            <button onclick="testI18nBinding()">测试 i18n 绑定</button>
+            <button onclick="initI18n()">初始化 i18n</button>
+        </div>
+        
+        <div id="console2" class="console-output"></div>
+    </div>
+
+    <script src="js/i18n.js"></script>
+    <script>
+        let manualTestOutput = '';
+        let i18nTestOutput = '';
+        
+        function log(message, type = 'info', consoleId = 'console1') {
+            const timestamp = new Date().toLocaleTimeString();
+            const className = type;
+            const output = `[${timestamp}] ${message}\n`;
+            
+            if (consoleId === 'console1') {
+                manualTestOutput += output;
+                document.getElementById('console1').innerHTML = `<span class="${className}">${manualTestOutput}</span>`;
+            } else {
+                i18nTestOutput += output;
+                document.getElementById('console2').innerHTML = `<span class="${className}">${i18nTestOutput}</span>`;
+            }
+            
+            console.log(message);
+        }
+        
+        function clearConsole() {
+            manualTestOutput = '';
+            i18nTestOutput = '';
+            document.getElementById('console1').innerHTML = '';
+            document.getElementById('console2').innerHTML = '';
+        }
+        
+        function testManualBinding() {
+            log('开始手动事件绑定测试...', 'info');
+            
+            const btn = document.getElementById('testLanguageBtn');
+            const dropdown = document.getElementById('testLanguageDropdown');
+            
+            if (!btn || !dropdown) {
+                log('❌ 找不到测试元素', 'error');
+                return;
+            }
+            
+            log('✅ 找到测试元素', 'success');
+            
+            // 移除旧的事件监听器
+            const newBtn = btn.cloneNode(true);
+            btn.parentNode.replaceChild(newBtn, btn);
+            
+            // 添加新的事件监听器
+            newBtn.addEventListener('click', function(e) {
+                log('🖱️ 手动绑定的点击事件触发！', 'success');
+                e.preventDefault();
+                e.stopPropagation();
+                
+                const wasOpen = dropdown.classList.contains('open');
+                dropdown.classList.toggle('open');
+                const isNowOpen = dropdown.classList.contains('open');
+                
+                log(`🔄 下拉菜单状态: ${wasOpen} -> ${isNowOpen}`, 'info');
+            });
+            
+            log('✅ 手动事件绑定完成', 'success');
+        }
+        
+        let i18nManager;
+        
+        async function initI18n() {
+            log('开始初始化 i18n...', 'info', 'console2');
+            
+            try {
+                i18nManager = new I18nManager();
+                await i18nManager.init();
+                log('✅ i18n 初始化成功', 'success', 'console2');
+            } catch (error) {
+                log(`❌ i18n 初始化失败: ${error.message}`, 'error', 'console2');
+            }
+        }
+        
+        function testI18nBinding() {
+            log('开始 i18n 事件绑定测试...', 'info', 'console2');
+            
+            if (!i18nManager) {
+                log('❌ i18n 未初始化，请先点击"初始化 i18n"', 'error', 'console2');
+                return;
+            }
+            
+            try {
+                i18nManager.bindExistingLanguageSelectorEvents();
+                log('✅ i18n 事件绑定完成', 'success', 'console2');
+            } catch (error) {
+                log(`❌ i18n 事件绑定失败: ${error.message}`, 'error', 'console2');
+            }
+        }
+        
+        // 页面加载完成后的测试
+        document.addEventListener('DOMContentLoaded', function() {
+            log('页面加载完成', 'info');
+            log('准备进行测试...', 'info');
+        });
+    </script>
+</body>
+</html>

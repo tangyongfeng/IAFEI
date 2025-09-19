@@ -4,7 +4,7 @@
  */
 class I18nManager {
     constructor() {
-        this.currentLanguageuage = 'en'; // 默认语言
+        this.currentLanguage = 'en'; // 默认语言
         this.translations = {};
         this.supportedLanguages = {
             'en': 'English',
@@ -172,7 +172,7 @@ class I18nManager {
         const elements = document.querySelectorAll('[data-i18n]');
         elements.forEach(element => {
             const key = element.getAttribute('data-i18n');
-            const translation = this.getTranslation(key);
+            const translation = this.t(key);
             
             if (translation) {
                 // Handle different types of content
@@ -194,7 +194,7 @@ class I18nManager {
         const ariaElements = document.querySelectorAll('[data-i18n-aria]');
         ariaElements.forEach(element => {
             const key = element.getAttribute('data-i18n-aria');
-            const translation = this.getTranslation(key);
+            const translation = this.t(key);
             
             if (translation) {
                 element.setAttribute('aria-label', translation);
@@ -212,10 +212,10 @@ class I18nManager {
         const titleElement = document.querySelector('title');
         if (titleElement && this.translations.meta) {
             const pageName = this.getPageName();
-            const siteTitle = this.getTranslation('meta.siteTitle') || 'IAFEI - International Association of Financial Executives Institutes';
+            const siteTitle = this.t('meta.siteTitle') || 'IAFEI - International Association of Financial Executives Institutes';
             
             if (pageName && pageName !== 'home') {
-                titleElement.textContent = `${this.getTranslation(`pages.${pageName}.title`)} - ${siteTitle}`;
+                titleElement.textContent = `${this.t(`pages.${pageName}.title`)} - ${siteTitle}`;
             } else {
                 titleElement.textContent = siteTitle;
             }
@@ -224,14 +224,14 @@ class I18nManager {
         // Update meta description
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc && this.translations.meta) {
-            const description = this.getTranslation('meta.description');
+            const description = this.t('meta.description');
             if (description) {
                 metaDesc.setAttribute('content', description);
             }
         }
 
         // Update html lang attribute
-        document.documentElement.setAttribute('lang', this.currentLanguageuage);
+        document.documentElement.setAttribute('lang', this.currentLanguage);
     }
 
     getPageName() {
@@ -361,15 +361,28 @@ class I18nManager {
      * 绑定现有语言选择器的事件
      */
     bindExistingLanguageSelectorEvents() {
+        console.log('🔧 bindExistingLanguageSelectorEvents called');
+        
         const languageBtn = document.getElementById('languageBtn');
         const dropdown = document.getElementById('languageDropdown');
         
+        console.log('🔍 Element search results:', {
+            languageBtn: !!languageBtn,
+            dropdown: !!dropdown,
+            btnId: languageBtn?.id,
+            dropdownId: dropdown?.id
+        });
+        
         if (!languageBtn || !dropdown) {
             console.error('❌ Language selector elements not found');
+            console.error('❌ languageBtn:', languageBtn);
+            console.error('❌ dropdown:', dropdown);
             return;
         }
         
         const options = dropdown.querySelectorAll('.language-option');
+        
+        console.log(`🔍 Found ${options.length} language options`);
         
         if (options.length === 0) {
             console.error('❌ No language options found');
@@ -380,28 +393,40 @@ class I18nManager {
         
         // 切换下拉菜单
         languageBtn.addEventListener('click', (e) => {
+            console.log('🖱️ Language button click event fired!');
+            e.preventDefault();
             e.stopPropagation();
-            dropdown.classList.toggle('show');
-            console.log('🖱️ Language button clicked, dropdown toggled');
+            
+            const wasOpen = dropdown.classList.contains('open');
+            dropdown.classList.toggle('open');
+            const isNowOpen = dropdown.classList.contains('open');
+            
+            console.log(`🔄 Dropdown toggled: ${wasOpen} -> ${isNowOpen}`);
         });
+        
+        console.log('✅ Click event listener added to language button');
         
         // 点击外部关闭下拉菜单
         document.addEventListener('click', (e) => {
             if (!languageBtn.contains(e.target) && !dropdown.contains(e.target)) {
-                dropdown.classList.remove('show');
+                dropdown.classList.remove('open');
             }
         });
         
         // 语言选项点击事件
         options.forEach(option => {
             option.addEventListener('click', async (e) => {
-                const lang = e.target.getAttribute('data-lang');
+                e.preventDefault();
+                e.stopPropagation();
+                
+                // 确保获取正确的data-lang属性，即使点击的是子元素
+                const lang = option.getAttribute('data-lang');
                 console.log(`🔄 Language option clicked: ${lang}`);
                 
                 if (lang && lang !== this.currentLanguage) {
                     console.log(`🌍 Switching to language: ${lang}`);
                     await this.setLanguage(lang);
-                    dropdown.classList.remove('show');
+                    dropdown.classList.remove('open');
                 } else {
                     console.log(`⚠️ Same language or invalid: current=${this.currentLanguage}, new=${lang}`);
                 }
@@ -470,7 +495,7 @@ class I18nManager {
         // 切换下拉菜单
         toggle.addEventListener('click', (e) => {
             e.stopPropagation();
-            dropdown.classList.toggle('show');
+            dropdown.classList.toggle('open');
             toggle.classList.toggle('active');
         });
         
@@ -479,14 +504,14 @@ class I18nManager {
             option.addEventListener('click', (e) => {
                 const newLang = e.target.getAttribute('data-lang');
                 this.switchLanguage(newLang);
-                dropdown.classList.remove('show');
+                dropdown.classList.remove('open');
                 toggle.classList.remove('active');
             });
         });
         
         // 点击外部关闭下拉菜单
         document.addEventListener('click', () => {
-            dropdown.classList.remove('show');
+            dropdown.classList.remove('open');
             toggle.classList.remove('active');
         });
     }
