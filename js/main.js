@@ -8,7 +8,25 @@ document.addEventListener('DOMContentLoaded', function() {
     initAnimations();
     initTouchInteractions();
     initPerformanceOptimizations();
+    
+    // Initialize internationalization system
+    initI18n();
 });
+
+// Initialize i18n system
+async function initI18n() {
+    try {
+        // Create i18n manager instance
+        window.i18n = new I18nManager();
+        
+        // Initialize the system
+        await window.i18n.init();
+        
+        console.log('I18n system initialized successfully');
+    } catch (error) {
+        console.error('Failed to initialize i18n system:', error);
+    }
+}
 
 // Mobile Navigation System
 function initMobileNavigation() {
