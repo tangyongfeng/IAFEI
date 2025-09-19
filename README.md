@@ -1,7 +1,8 @@
 # IAFEI 官方网站 - 移动优化版
 
 基于原始 IAFEI 官网 (https://www.iafei.org/) 的现代化重构版本，具备全面的移动端优化功能
-**测试展示。https://tangyongfeng.github.io/IAFEI/index.html
+
+ ** 测试展示。** https://tangyongfeng.github.io/IAFEI/index.html
 
 ## 🎯 网站概述
 
