@@ -306,17 +306,111 @@ class I18nManager {
     }
 
     /**
+     * 设置语言（switchLanguage的别名）
+     */
+    async setLanguage(newLang) {
+        return await this.switchLanguage(newLang);
+    }
+
+    /**
+     * 更新语言选择器显示
+     */
+    updateLanguageSelector() {
+        // 更新现有的语言选择器
+        this.updateLanguageSelectorDisplay();
+        
+        // 更新传统语言选择器（如果存在）
+        const currentSpan = document.querySelector('.language-current');
+        if (currentSpan) {
+            currentSpan.textContent = this.supportedLanguages[this.currentLanguage];
+        }
+        
+        // 更新所有语言选项的active状态
+        const allOptions = document.querySelectorAll('.language-option');
+        allOptions.forEach(option => {
+            const lang = option.getAttribute('data-lang');
+            if (lang === this.currentLanguage) {
+                option.classList.add('active');
+            } else {
+                option.classList.remove('active');
+            }
+        });
+    }
+
+    /**
      * 初始化语言选择器
      */
     initLanguageSelector() {
-        // 创建语言选择器HTML
-        const languageSelector = this.createLanguageSelector();
+        // 检查页面中是否已有语言选择器
+        const existingSelector = document.getElementById('languageSelector');
         
-        // 将选择器添加到页面左下角
-        document.body.appendChild(languageSelector);
+        if (existingSelector) {
+            // 使用现有的语言选择器
+            this.bindExistingLanguageSelectorEvents();
+            this.updateLanguageSelectorDisplay();
+        } else {
+            // 创建新的语言选择器（向后兼容）
+            const languageSelector = this.createLanguageSelector();
+            document.body.appendChild(languageSelector);
+            this.bindLanguageSelectorEvents();
+        }
+    }
+
+    /**
+     * 绑定现有语言选择器的事件
+     */
+    bindExistingLanguageSelectorEvents() {
+        const languageBtn = document.getElementById('languageBtn');
+        const dropdown = document.getElementById('languageDropdown');
+        const options = dropdown.querySelectorAll('.language-option');
         
-        // 绑定事件
-        this.bindLanguageSelectorEvents();
+        // 切换下拉菜单
+        languageBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdown.classList.toggle('show');
+        });
+        
+        // 点击外部关闭下拉菜单
+        document.addEventListener('click', (e) => {
+            if (!languageBtn.contains(e.target) && !dropdown.contains(e.target)) {
+                dropdown.classList.remove('show');
+            }
+        });
+        
+        // 语言选项点击事件
+        options.forEach(option => {
+            option.addEventListener('click', async (e) => {
+                const lang = e.target.getAttribute('data-lang');
+                if (lang && lang !== this.currentLanguage) {
+                    await this.setLanguage(lang);
+                    dropdown.classList.remove('show');
+                }
+            });
+        });
+        
+        console.log('✅ Language selector events bound');
+    }
+
+    /**
+     * 更新语言选择器显示
+     */
+    updateLanguageSelectorDisplay() {
+        const currentLanguageSpan = document.getElementById('currentLanguage');
+        const options = document.querySelectorAll('.language-option');
+        
+        if (currentLanguageSpan) {
+            currentLanguageSpan.textContent = this.supportedLanguages[this.currentLanguage];
+        }
+        
+        // 更新选项的active状态
+        options.forEach(option => {
+            const lang = option.getAttribute('data-lang');
+            if (lang === this.currentLanguage) {
+                option.classList.add('active');
+            } else {
+                option.classList.remove('active');
+            }
+        });
     }
 
     /**
