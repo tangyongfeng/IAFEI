@@ -1,16 +1,17 @@
 {
   "meta": {
-    "lang": "en",
-    "htmlLang": "en",
-    "name": "English",
-    "title": "IAFEI - International Association of Financial Executives Institutes"
+    "language": "English",
+    "code": "en",
+    "rtl": false,
+    "siteTitle": "IAFEI - International Association of Financial Executives Institutes",
+    "description": "The International Association of Financial Executives Institutes (IAFEI) - Advancing financial excellence worldwide through professional development, networking, and knowledge sharing."
   },
   "navigation": {
     "home": "Home",
     "about": "About",
     "history": "History",
     "officers": "Officers",
-    "bylaws": "By-Laws", 
+    "bylaws": "By-Laws",
     "technical": "Technical Committee",
     "conduct": "Code of Conduct",
     "members": "Members",
@@ -25,59 +26,108 @@
     "aboutIAFEI": "About IAFEI"
   },
   "homepage": {
+    "partnersTitle": "IAFEI Partners",
+    "partners": {
+      "accenture": {
+        "name": "Accenture",
+        "description": "Global management consulting and professional services"
+      },
+      "cfe": {
+        "name": "CFE Tax Advisers Europe",
+        "description": "Confederation of European tax adviser organizations"
+      },
+      "nomura": {
+        "name": "Nomura",
+        "description": "Leading financial services group"
+      },
+      "sp": {
+        "name": "S&P Global",
+        "description": "Credit ratings, benchmarks, analytics and workflow solutions"
+      }
+    },
     "about": {
       "title": "About IAFEI",
       "description": "The International Association of Financial Executives Institutes (IAFEI) brings together national professional organizations of financial executives from around the world.",
-      "founded": "Founded in 1969, IAFEI serves as a global platform for professional development, networking, and knowledge sharing among financial executives worldwide."
+      "founded": "Founded in 1969, IAFEI serves as a global platform for professional development, networking, and knowledge sharing among financial executives worldwide.",
+      "learnHistory": "Learn About Our History"
     },
-    "mission": {
-      "title": "Our Mission",
-      "description": "To advance the profession of financial management worldwide through education, certification, and professional development programs that enhance the skills and knowledge of financial executives globally."
-    },
-    "members": {
-      "title": "Global Network",
-      "description": "IAFEI represents professional organizations from major economies including the United States, Japan, China, Germany, and many other countries, creating a truly international network of financial professionals."
-    }
-  },
-  "footer": {
-    "copyright": "© 2025 International Association of Financial Executives Institutes. All rights reserved.",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
-  },
-  "pages": {
-    "about": {
-      "title": "About IAFEI",
-      "mission": "Our Mission",
-      "history": "Our History",
-      "founded": "Founded in 1969",
-      "description": "IAFEI represents the collective voice of financial executives worldwide."
-    },
-    "members": {
-      "title": "Member Organizations",
-      "description": "IAFEI brings together leading financial executive organizations from around the world."
+    "highlights": {
+      "title": "IAFEI 2025 Highlights",
+      "subtitle": "Join us for an exceptional gathering of the world's leading financial minds",
+      "speakers": {
+        "title": "Expert Speakers",
+        "description": "Renowned financial leaders and CFOs presenting on the future of finance, digital transformation, and sustainable business practices."
+      },
+      "innovation": {
+        "title": "Innovation Forum",
+        "description": "Explore cutting-edge financial technologies, ESG reporting, and breakthrough innovations reshaping the finance industry."
+      },
+      "network": {
+        "title": "Global Network",
+        "description": "Connect with financial executives from over 20 countries and leading multinational organizations worldwide."
+      }
     },
     "news": {
-      "title": "News & Events",
-      "worldCongress": "World Congress",
-      "latest": "Latest News"
+      "title": "Latest News",
+      "subtitle": "Stay updated with the latest developments in financial management",
+      "article1": {
+        "date": "December 15, 2024",
+        "title": "New Financial Reporting Standards",
+        "excerpt": "IAFEI announces collaboration with international accounting bodies on enhanced financial reporting standards, focusing on ESG integration and digital disclosure frameworks."
+      },
+      "article2": {
+        "date": "December 10, 2024",
+        "title": "Digital Finance Transformation Webinar",
+        "excerpt": "Join us for a comprehensive session on digital transformation in finance. Expert speakers will discuss AI, blockchain, and the future of financial operations."
+      },
+      "article3": {
+        "date": "December 5, 2024",
+        "title": "IAFEI Welcomes New Member Institutes",
+        "excerpt": "We are pleased to announce new member institutes from emerging markets, strengthening our global financial executive community."
+      }
     },
+    "membership": {
+      "title": "Become a Member",
+      "subtitle": "Join the leading community in financial management and enjoy exclusive benefits including access to cutting-edge research, networking opportunities, and professional development resources.",
+      "button": "Learn More"
+    }
+  },
+  "pages": {
     "contact": {
       "title": "Contact Us",
       "name": "Name",
       "email": "Email",
+      "subject": "Subject",
       "message": "Message",
-      "send": "Send Message",
-      "required": "Required field"
+      "send": "Send Message"
     }
+  },
+  "footer": {
+    "contact": {
+      "title": "Contact Information",
+      "chairman": "Chairman",
+      "secretariat": "Secretariat",
+      "support": "Support"
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "about": "About IAFEI",
+      "members": "Member Institutes",
+      "news": "News & Events",
+      "publications": "Publications"
+    },
+    "resources": {
+      "title": "Resources",
+      "membership": "Membership",
+      "congress": "World Congress",
+      "quarterly": "IAFEI Quarterly",
+      "contact": "Contact Us"
+    },
+    "copyright": "© 2025 International Association of Financial Executives Institutes. All rights reserved."
   },
   "common": {
     "loading": "Loading...",
     "error": "Error loading content",
-    "close": "Close",
-    "open": "Open",
-    "menu": "Menu",
-    "language": "Language",
-    "readMore": "Read More",
-    "backToTop": "Back to Top"
+    "menu": "Menu"
   }
 }

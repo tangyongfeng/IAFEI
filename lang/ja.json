@@ -1,57 +1,130 @@
 {
   "meta": {
-    "lang": "ja",
-    "htmlLang": "ja",
-    "name": "日本語",
-    "title": "IAFEI - 国際財務役員協会連合会"
+    "language": "日本語",
+    "code": "ja",
+    "rtl": false
   },
   "navigation": {
     "home": "ホーム",
-    "about": "私たちについて",
+    "about": "協会について",
     "history": "歴史",
     "officers": "役員",
     "bylaws": "定款",
     "technical": "技術委員会",
     "conduct": "行動規範",
-    "members": "会員機関",
+    "members": "メンバー",
     "news": "ニュース・イベント",
     "publications": "出版物",
     "contact": "お問い合わせ"
   },
   "hero": {
-    "title": "IAFEI 2025年世界大会",
-    "subtitle": "世界の財務エクセレンスの向上",
-    "learnMore": "詳細はこちら",
+    "title": "IAFEI 2025世界大会",
+    "subtitle": "世界の財務エクセレンスの推進",
+    "learnMore": "詳しく見る",
     "aboutIAFEI": "IAFEIについて"
   },
   "homepage": {
+    "partnersTitle": "IAFEIパートナー",
+    "partners": {
+      "accenture": {
+        "name": "アクセンチュア",
+        "description": "グローバル経営コンサルティング・プロフェッショナルサービス"
+      },
+      "cfe": {
+        "name": "欧州税務顧問連盟",
+        "description": "欧州税務顧問組織の連合体"
+      },
+      "nomura": {
+        "name": "野村ホールディングス",
+        "description": "大手金融サービスグループ"
+      },
+      "sp": {
+        "name": "S&Pグローバル",
+        "description": "信用格付け、ベンチマーク、分析、ワークフローソリューション"
+      }
+    },
     "about": {
       "title": "IAFEIについて",
-      "description": "国際財務役員協会連合会（IAFEI）は、世界各国の財務役員専門組織を結集しています。",
-      "founded": "IAFEIは1969年に設立され、世界中の財務役員の専門開発、ネットワーキング、知識共有のためのグローバルプラットフォームとして機能しています。"
+      "description": "国際財務役員協会連盟（IAFEI）は、世界各国の財務役員の専門組織を結集しています。",
+      "founded": "1969年に設立されたIAFEIは、世界中の財務役員の専門能力開発、ネットワーキング、知識共有のためのグローバルプラットフォームとして機能しています。"
     },
-    "mission": {
-      "title": "私たちの使命",
-      "description": "教育、認定、専門開発プログラムを通じて世界の財務管理専門職を向上させ、世界中の財務役員のスキルと知識を向上させることです。"
+    "highlights": {
+      "title": "IAFEI 2025ハイライト",
+      "subtitle": "世界の一流の財務専門家による特別な集会にご参加ください",
+      "speakers": {
+        "title": "専門講演者",
+        "description": "著名な財務リーダーやCFOが、財務の未来、デジタル変革、持続可能なビジネス慣行について発表します。"
+      },
+      "innovation": {
+        "title": "イノベーション・フォーラム",
+        "description": "最先端の金融技術、ESGレポーティング、金融業界を変革する画期的なイノベーションを探究します。"
+      },
+      "network": {
+        "title": "グローバル・ネットワーク",
+        "description": "20か国以上の財務役員や主要な多国籍企業とのつながりを築きます。"
+      }
     },
-    "members": {
-      "title": "グローバルネットワーク",
-      "description": "IAFEIは、米国、日本、中国、ドイツなどの主要経済国の専門組織を代表し、真の国際的な財務専門家ネットワークを構築しています。"
+    "news": {
+      "title": "最新ニュース",
+      "subtitle": "財務管理の最新動向をお伝えします",
+      "article1": {
+        "date": "2024年12月15日",
+        "title": "新しい財務報告基準",
+        "excerpt": "IAFEIは国際会計機関との協力により、ESG統合とデジタル開示フレームワークに焦点を当てた強化された財務報告基準を発表しました。"
+      },
+      "article2": {
+        "date": "2024年12月10日",
+        "title": "デジタル財務変革ウェビナー",
+        "excerpt": "財務のデジタル変革に関する包括的なセッションにご参加ください。専門家がAI、ブロックチェーン、財務オペレーションの将来について議論します。"
+      },
+      "article3": {
+        "date": "2024年12月5日",
+        "title": "IAFEI新メンバー機関を歓迎",
+        "excerpt": "新興市場からの新しいメンバー機関の参加を発表し、グローバル財務役員コミュニティを強化いたします。"
+      }
+    },
+    "membership": {
+      "title": "メンバーになる",
+      "subtitle": "財務管理の主要コミュニティに参加し、最先端の研究へのアクセス、ネットワーキング機会、専門能力開発リソースなどの特別な特典をお楽しみください。",
+      "button": "詳しく見る"
+    }
+  },
+  "pages": {
+    "contact": {
+      "title": "お問い合わせ",
+      "name": "お名前",
+      "email": "メールアドレス",
+      "subject": "件名",
+      "message": "メッセージ",
+      "send": "送信"
     }
   },
   "footer": {
-    "copyright": "© 2025 国際財務役員協会連合会。全権利留保。",
-    "privacy": "プライバシーポリシー",
-    "terms": "利用規約"
+    "contact": {
+      "title": "連絡先情報",
+      "chairman": "会長",
+      "secretariat": "事務局",
+      "support": "サポート"
+    },
+    "quickLinks": {
+      "title": "クイックリンク",
+      "about": "IAFEIについて",
+      "members": "メンバー機関",
+      "news": "ニュース・イベント",
+      "publications": "出版物"
+    },
+    "resources": {
+      "title": "リソース",
+      "membership": "メンバーシップ",
+      "congress": "世界大会",
+      "quarterly": "IAFEI季報",
+      "contact": "お問い合わせ"
+    },
+    "copyright": "© 2025 国際財務役員協会連盟。無断転載を禁じます。"
   },
   "common": {
     "loading": "読み込み中...",
     "error": "コンテンツの読み込みエラー",
-    "close": "閉じる",
-    "open": "開く",
-    "menu": "メニュー",
-    "language": "言語",
-    "readMore": "続きを読む",
-    "backToTop": "トップに戻る"
+    "menu": "メニュー"
   }
 }

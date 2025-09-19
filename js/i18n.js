@@ -155,43 +155,87 @@ class I18nManager {
      * 应用翻译到页面元素
      */
     applyTranslations() {
-        // 更新页面标题
-        if (this.translations.meta && this.translations.meta.title) {
-            document.title = this.translations.meta.title;
+        if (!this.translations) {
+            console.warn('No translations available');
+            return;
         }
 
-        // 查找所有带有 data-i18n 属性的元素
+        console.log('Applying translations for language:', this.currentLanguage);
+
+        // Update all elements with data-i18n attribute
         const elements = document.querySelectorAll('[data-i18n]');
-        
         elements.forEach(element => {
             const key = element.getAttribute('data-i18n');
-            const translation = this.t(key);
+            const translation = this.getTranslation(key);
             
-            if (translation && translation !== key) {
-                // 根据元素类型设置内容
+            if (translation) {
+                // Handle different types of content
                 if (element.tagName === 'INPUT' && element.type === 'submit') {
                     element.value = translation;
-                } else if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                } else if (element.hasAttribute('placeholder')) {
                     element.placeholder = translation;
                 } else if (element.hasAttribute('title')) {
                     element.title = translation;
                 } else {
                     element.textContent = translation;
                 }
+            } else {
+                console.warn(`Translation not found for key: ${key}`);
             }
         });
 
-        // 更新 aria-label 属性
+        // Update elements with data-i18n-aria attribute
         const ariaElements = document.querySelectorAll('[data-i18n-aria]');
         ariaElements.forEach(element => {
             const key = element.getAttribute('data-i18n-aria');
-            const translation = this.t(key);
-            if (translation && translation !== key) {
+            const translation = this.getTranslation(key);
+            
+            if (translation) {
                 element.setAttribute('aria-label', translation);
             }
         });
 
-        console.log(`🌐 Applied translations for ${this.currentLang}`);
+        // Update page meta information
+        this.updatePageMeta();
+
+        console.log('Translations applied successfully');
+    }
+
+    updatePageMeta() {
+        // Update page title
+        const titleElement = document.querySelector('title');
+        if (titleElement && this.translations.meta) {
+            const pageName = this.getPageName();
+            const siteTitle = this.getTranslation('meta.siteTitle') || 'IAFEI - International Association of Financial Executives Institutes';
+            
+            if (pageName && pageName !== 'home') {
+                titleElement.textContent = `${this.getTranslation(`pages.${pageName}.title`)} - ${siteTitle}`;
+            } else {
+                titleElement.textContent = siteTitle;
+            }
+        }
+
+        // Update meta description
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc && this.translations.meta) {
+            const description = this.getTranslation('meta.description');
+            if (description) {
+                metaDesc.setAttribute('content', description);
+            }
+        }
+
+        // Update html lang attribute
+        document.documentElement.setAttribute('lang', this.currentLanguage);
+    }
+
+    getPageName() {
+        const path = window.location.pathname;
+        if (path.includes('contact.html')) return 'contact';
+        if (path.includes('about.html')) return 'about';
+        if (path.includes('members.html')) return 'members';
+        if (path.includes('news.html')) return 'news';
+        if (path.includes('publications.html')) return 'publications';
+        return 'home';
     }
 
     /**

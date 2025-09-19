@@ -1,16 +1,17 @@
 {
   "meta": {
-    "lang": "zh-cn",
-    "htmlLang": "zh-CN",
-    "name": "简体中文",
-    "title": "IAFEI - 国际财务主管协会联合会"
+    "language": "简体中文",
+    "code": "zh-cn",
+    "rtl": false,
+    "siteTitle": "IAFEI - 国际财务总监协会联合会",
+    "description": "国际财务总监协会联合会（IAFEI）- 通过专业发展、网络建设和知识分享推进全球财务卓越发展。"
   },
   "navigation": {
     "home": "首页",
     "about": "关于我们",
     "history": "历史沿革",
-    "officers": "领导团队",
-    "bylaws": "章程制度",
+    "officers": "执行官员",
+    "bylaws": "章程细则",
     "technical": "技术委员会",
     "conduct": "行为准则",
     "members": "成员机构",
@@ -19,65 +20,114 @@
     "contact": "联系我们"
   },
   "hero": {
-    "title": "IAFEI 2025年世界大会",
+    "title": "IAFEI 2025世界大会",
     "subtitle": "推进全球财务卓越发展",
     "learnMore": "了解更多",
     "aboutIAFEI": "关于IAFEI"
   },
   "homepage": {
+    "partnersTitle": "IAFEI合作伙伴",
+    "partners": {
+      "accenture": {
+        "name": "埃森哲",
+        "description": "全球管理咨询和专业服务公司"
+      },
+      "cfe": {
+        "name": "欧洲税务顾问联合会",
+        "description": "欧洲税务顾问组织联盟"
+      },
+      "nomura": {
+        "name": "野村控股",
+        "description": "领先的金融服务集团"
+      },
+      "sp": {
+        "name": "标准普尔全球",
+        "description": "信用评级、基准、分析和工作流解决方案"
+      }
+    },
     "about": {
       "title": "关于IAFEI",
-      "description": "国际财务主管协会联合会（IAFEI）汇聚了来自世界各国的财务主管专业组织。",
-      "founded": "IAFEI成立于1969年，是全球财务主管专业发展、网络建设和知识分享的国际平台。"
+      "description": "国际财务总监协会联合会（IAFEI）汇聚了来自世界各地的国家级财务高管专业组织。",
+      "founded": "IAFEI成立于1969年，致力于为全球财务高管提供专业发展、网络建设和知识分享的国际平台。",
+      "learnHistory": "了解我们的历史"
     },
-    "mission": {
-      "title": "我们的使命",
-      "description": "通过教育、认证和专业发展项目推进全球财务管理专业发展，提升全球财务主管的技能和知识水平。"
-    },
-    "members": {
-      "title": "全球网络",
-      "description": "IAFEI代表来自美国、日本、中国、德国等主要经济体的专业组织，构建了真正的国际财务专业人士网络。"
-    }
-  },
-  "footer": {
-    "copyright": "© 2025 国际财务主管协会联合会。保留所有权利。",
-    "privacy": "隐私政策",
-    "terms": "服务条款"
-  },
-  "pages": {
-    "about": {
-      "title": "关于IAFEI",
-      "mission": "我们的使命",
-      "history": "我们的历史",
-      "founded": "成立于1969年",
-      "description": "IAFEI代表着全球财务主管的集体声音。"
-    },
-    "members": {
-      "title": "成员机构",
-      "description": "IAFEI汇聚了来自世界各地的领先财务主管组织。"
+    "highlights": {
+      "title": "IAFEI 2025亮点",
+      "subtitle": "与全球顶尖财务精英共襄盛举",
+      "speakers": {
+        "title": "专家演讲",
+        "description": "知名财务领袖和首席财务官分享财务未来、数字化转型和可持续商业实践的前沿观点。"
+      },
+      "innovation": {
+        "title": "创新论坛",
+        "description": "探索前沿金融科技、ESG报告和重塑金融行业的突破性创新。"
+      },
+      "network": {
+        "title": "全球网络",
+        "description": "与来自20多个国家和领先跨国组织的财务高管建立联系。"
+      }
     },
     "news": {
-      "title": "新闻动态",
-      "worldCongress": "世界大会",
-      "latest": "最新消息"
+      "title": "最新动态",
+      "subtitle": "了解财务管理领域的最新发展动向",
+      "article1": {
+        "date": "2024年12月15日",
+        "title": "新财务报告标准发布",
+        "excerpt": "IAFEI宣布与国际会计机构合作制定增强财务报告标准，重点关注ESG整合和数字化披露框架。"
+      },
+      "article2": {
+        "date": "2024年12月10日",
+        "title": "数字化财务转型网络研讨会",
+        "excerpt": "参加我们关于财务数字化转型的综合会议。专家演讲者将讨论人工智能、区块链和财务运营的未来。"
+      },
+      "article3": {
+        "date": "2024年12月5日",
+        "title": "IAFEI欢迎新成员机构",
+        "excerpt": "我们很高兴宣布来自新兴市场的新成员机构加入，进一步壮大我们的全球财务高管社区。"
+      }
     },
+    "membership": {
+      "title": "成为会员",
+      "subtitle": "加入领先的财务管理社区，享受独家权益，包括获取前沿研究、网络机会和专业发展资源。",
+      "button": "了解更多"
+    }
+  },
+  "pages": {
     "contact": {
       "title": "联系我们",
       "name": "姓名",
-      "email": "电子邮箱",
+      "email": "邮箱",
+      "subject": "主题",
       "message": "留言",
-      "send": "发送消息",
-      "required": "必填项"
+      "send": "发送消息"
     }
+  },
+  "footer": {
+    "contact": {
+      "title": "联系信息",
+      "chairman": "主席",
+      "secretariat": "秘书处",
+      "support": "支持"
+    },
+    "quickLinks": {
+      "title": "快速链接",
+      "about": "关于IAFEI",
+      "members": "成员机构",
+      "news": "新闻动态",
+      "publications": "出版物"
+    },
+    "resources": {
+      "title": "资源",
+      "membership": "会员资格",
+      "congress": "世界大会",
+      "quarterly": "IAFEI季刊",
+      "contact": "联系我们"
+    },
+    "copyright": "© 2025 国际财务总监协会联合会。保留所有权利。"
   },
   "common": {
     "loading": "加载中...",
     "error": "内容加载错误",
-    "close": "关闭",
-    "open": "打开",
-    "menu": "菜单",
-    "language": "语言",
-    "readMore": "阅读更多",
-    "backToTop": "返回顶部"
+    "menu": "菜单"
   }
 }

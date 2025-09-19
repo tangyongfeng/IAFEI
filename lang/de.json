@@ -1,57 +1,130 @@
 {
   "meta": {
-    "lang": "de",
-    "htmlLang": "de",
-    "name": "Deutsch",
-    "title": "IAFEI - Internationale Vereinigung der Finanzführungskräfte-Institute"
+    "language": "Deutsch",
+    "code": "de",
+    "rtl": false
   },
   "navigation": {
     "home": "Startseite",
     "about": "Über uns",
     "history": "Geschichte",
-    "officers": "Führungskräfte",
+    "officers": "Amtsträger",
     "bylaws": "Satzung",
-    "technical": "Technisches Komitee",
+    "technical": "Technischer Ausschuss",
     "conduct": "Verhaltenskodex",
-    "members": "Mitgliedsorganisationen",
+    "members": "Mitglieder",
     "news": "Nachrichten & Veranstaltungen",
     "publications": "Publikationen",
     "contact": "Kontakt"
   },
   "hero": {
     "title": "IAFEI Weltkongress 2025",
-    "subtitle": "Förderung der Finanzexzellenz weltweit",
+    "subtitle": "Förderung finanzieller Exzellenz weltweit",
     "learnMore": "Mehr erfahren",
     "aboutIAFEI": "Über IAFEI"
   },
   "homepage": {
+    "partnersTitle": "IAFEI Partner",
+    "partners": {
+      "accenture": {
+        "name": "Accenture",
+        "description": "Globale Managementberatung und professionelle Dienstleistungen"
+      },
+      "cfe": {
+        "name": "CFE Steuerberater Europa",
+        "description": "Dachverband europäischer Steuerberaterorganisationen"
+      },
+      "nomura": {
+        "name": "Nomura",
+        "description": "Führende Finanzdienstleistungsgruppe"
+      },
+      "sp": {
+        "name": "S&P Global",
+        "description": "Kreditratings, Benchmarks, Analysen und Workflow-Lösungen"
+      }
+    },
     "about": {
       "title": "Über IAFEI",
-      "description": "Die Internationale Vereinigung der Finanzführungskräfte-Institute (IAFEI) bringt nationale Berufsorganisationen von Finanzführungskräften aus der ganzen Welt zusammen.",
-      "founded": "IAFEI wurde 1969 gegründet und dient als globale Plattform für berufliche Entwicklung, Networking und Wissensaustausch unter Finanzführungskräften weltweit."
+      "description": "Die Internationale Vereinigung der Verbände für Finanzführungskräfte (IAFEI) bringt nationale Berufsorganisationen von Finanzführungskräften aus aller Welt zusammen.",
+      "founded": "IAFEI wurde 1969 gegründet und dient als globale Plattform für die berufliche Entwicklung, Vernetzung und den Wissensaustausch von Finanzführungskräften weltweit."
     },
-    "mission": {
-      "title": "Unsere Mission",
-      "description": "Die Förderung des Finanzmanagement-Berufs weltweit durch Bildung, Zertifizierung und berufliche Entwicklungsprogramme, die die Fähigkeiten und das Wissen von Finanzführungskräften global verbessern."
+    "highlights": {
+      "title": "IAFEI 2025 Höhepunkte",
+      "subtitle": "Nehmen Sie an einer außergewöhnlichen Versammlung der weltweit führenden Finanzexperten teil",
+      "speakers": {
+        "title": "Expertenredner",
+        "description": "Renommierte Finanzführer und CFOs präsentieren die Zukunft der Finanzen, digitale Transformation und nachhaltige Geschäftspraktiken."
+      },
+      "innovation": {
+        "title": "Innovationsforum",
+        "description": "Erkunden Sie modernste Finanztechnologien, ESG-Berichterstattung und bahnbrechende Innovationen, die die Finanzbranche umgestalten."
+      },
+      "network": {
+        "title": "Globales Netzwerk",
+        "description": "Vernetzen Sie sich mit Finanzführungskräften aus über 20 Ländern und führenden multinationalen Organisationen weltweit."
+      }
     },
-    "members": {
-      "title": "Globales Netzwerk",
-      "description": "IAFEI vertritt Berufsorganisationen aus wichtigen Volkswirtschaften wie den USA, Japan, China, Deutschland und vielen anderen Ländern und schafft ein wahrhaft internationales Netzwerk von Finanzfachleuten."
+    "news": {
+      "title": "Aktuelle Nachrichten",
+      "subtitle": "Bleiben Sie auf dem Laufenden über die neuesten Entwicklungen im Finanzmanagement",
+      "article1": {
+        "date": "15. Dezember 2024",
+        "title": "Neue Finanzberichterstattungsstandards",
+        "excerpt": "IAFEI kündigt Zusammenarbeit mit internationalen Rechnungslegungsgremien bei verbesserten Finanzberichterstattungsstandards an, mit Fokus auf ESG-Integration und digitale Offenlegungsrahmen."
+      },
+      "article2": {
+        "date": "10. Dezember 2024",
+        "title": "Webinar zur digitalen Finanztransformation",
+        "excerpt": "Nehmen Sie an unserer umfassenden Sitzung zur digitalen Transformation im Finanzwesen teil. Experten diskutieren KI, Blockchain und die Zukunft der Finanzoperationen."
+      },
+      "article3": {
+        "date": "5. Dezember 2024",
+        "title": "IAFEI begrüßt neue Mitgliedsinstitute",
+        "excerpt": "Wir freuen uns, neue Mitgliedsinstitute aus Schwellenmärkten anzukündigen und unsere globale Finanzführungskräfte-Gemeinschaft zu stärken."
+      }
+    },
+    "membership": {
+      "title": "Mitglied werden",
+      "subtitle": "Treten Sie der führenden Gemeinschaft im Finanzmanagement bei und genießen Sie exklusive Vorteile, einschließlich Zugang zu modernster Forschung, Networking-Möglichkeiten und beruflichen Entwicklungsressourcen.",
+      "button": "Mehr erfahren"
+    }
+  },
+  "pages": {
+    "contact": {
+      "title": "Kontakt",
+      "name": "Name",
+      "email": "E-Mail",
+      "subject": "Betreff",
+      "message": "Nachricht",
+      "send": "Nachricht senden"
     }
   },
   "footer": {
-    "copyright": "© 2025 Internationale Vereinigung der Finanzführungskräfte-Institute. Alle Rechte vorbehalten.",
-    "privacy": "Datenschutzrichtlinie",
-    "terms": "Nutzungsbedingungen"
+    "contact": {
+      "title": "Kontaktinformationen",
+      "chairman": "Vorsitzender",
+      "secretariat": "Sekretariat",
+      "support": "Support"
+    },
+    "quickLinks": {
+      "title": "Schnelle Links",
+      "about": "Über IAFEI",
+      "members": "Mitgliedsinstitute",
+      "news": "Nachrichten & Veranstaltungen",
+      "publications": "Publikationen"
+    },
+    "resources": {
+      "title": "Ressourcen",
+      "membership": "Mitgliedschaft",
+      "congress": "Weltkongress",
+      "quarterly": "IAFEI Quartalsschrift",
+      "contact": "Kontakt"
+    },
+    "copyright": "© 2025 Internationale Vereinigung der Verbände für Finanzführungskräfte. Alle Rechte vorbehalten."
   },
   "common": {
     "loading": "Wird geladen...",
     "error": "Fehler beim Laden des Inhalts",
-    "close": "Schließen",
-    "open": "Öffnen",
-    "menu": "Menü",
-    "language": "Sprache",
-    "readMore": "Weiterlesen",
-    "backToTop": "Nach oben"
+    "menu": "Menü"
   }
 }

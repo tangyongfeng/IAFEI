@@ -1,9 +1,8 @@
 {
   "meta": {
-    "lang": "it",
-    "htmlLang": "it",
-    "name": "Italiano",
-    "title": "IAFEI - Associazione Internazionale degli Istituti di Dirigenti Finanziari"
+    "language": "Italiano",
+    "code": "it",
+    "rtl": false
   },
   "navigation": {
     "home": "Home",
@@ -13,45 +12,119 @@
     "bylaws": "Statuto",
     "technical": "Comitato Tecnico",
     "conduct": "Codice di Condotta",
-    "members": "Organizzazioni membri",
-    "news": "Notizie ed Eventi",
+    "members": "Membri",
+    "news": "Notizie & Eventi",
     "publications": "Pubblicazioni",
     "contact": "Contatti"
   },
   "hero": {
     "title": "Congresso Mondiale IAFEI 2025",
-    "subtitle": "Promuovere l'Eccellenza Finanziaria nel Mondo",
+    "subtitle": "Promuovendo l'Eccellenza Finanziaria nel Mondo",
     "learnMore": "Scopri di più",
-    "aboutIAFEI": "Chi è IAFEI"
+    "aboutIAFEI": "Riguardo IAFEI"
   },
   "homepage": {
+    "partnersTitle": "Partner IAFEI",
+    "partners": {
+      "accenture": {
+        "name": "Accenture",
+        "description": "Consulenza gestionale globale e servizi professionali"
+      },
+      "cfe": {
+        "name": "CFE Consulenti Fiscali Europa",
+        "description": "Confederazione delle organizzazioni europee di consulenti fiscali"
+      },
+      "nomura": {
+        "name": "Nomura",
+        "description": "Gruppo leader nei servizi finanziari"
+      },
+      "sp": {
+        "name": "S&P Global",
+        "description": "Rating creditizi, benchmark, analisi e soluzioni di flusso di lavoro"
+      }
+    },
     "about": {
-      "title": "Chi è IAFEI",
-      "description": "L'Associazione Internazionale degli Istituti di Dirigenti Finanziari (IAFEI) riunisce le organizzazioni professionali nazionali di dirigenti finanziari di tutto il mondo.",
-      "founded": "Fondata nel 1969, IAFEI serve come piattaforma globale per lo sviluppo professionale, il networking e la condivisione di conoscenze tra dirigenti finanziari in tutto il mondo."
+      "title": "Riguardo IAFEI",
+      "description": "L'Associazione Internazionale degli Istituti di Dirigenti Finanziari (IAFEI) riunisce organizzazioni professionali nazionali di dirigenti finanziari da tutto il mondo.",
+      "founded": "Fondata nel 1969, IAFEI serve come piattaforma globale per lo sviluppo professionale, il networking e la condivisione delle conoscenze tra dirigenti finanziari di tutto il mondo."
     },
-    "mission": {
-      "title": "La nostra Missione",
-      "description": "Promuovere la professione della gestione finanziaria in tutto il mondo attraverso programmi di educazione, certificazione e sviluppo professionale che migliorano le competenze e le conoscenze dei dirigenti finanziari a livello globale."
+    "highlights": {
+      "title": "Punti Salienti IAFEI 2025",
+      "subtitle": "Unisciti a noi per un eccezionale raduno delle menti finanziarie leader al mondo",
+      "speakers": {
+        "title": "Relatori Esperti",
+        "description": "Leader finanziari rinomati e CFO che presentano il futuro della finanza, la trasformazione digitale e le pratiche commerciali sostenibili."
+      },
+      "innovation": {
+        "title": "Forum dell'Innovazione",
+        "description": "Esplora tecnologie finanziarie all'avanguardia, reporting ESG e innovazioni rivoluzionarie che stanno ridefinendo l'industria finanziaria."
+      },
+      "network": {
+        "title": "Rete Globale",
+        "description": "Connettiti con dirigenti finanziari di oltre 20 paesi e organizzazioni multinazionali leader nel mondo."
+      }
     },
-    "members": {
-      "title": "Rete Globale",
-      "description": "IAFEI rappresenta organizzazioni professionali delle principali economie tra cui Stati Uniti, Giappone, Cina, Germania e molti altri paesi, creando una rete veramente internazionale di professionisti finanziari."
+    "news": {
+      "title": "Ultime Notizie",
+      "subtitle": "Rimani aggiornato sugli ultimi sviluppi nella gestione finanziaria",
+      "article1": {
+        "date": "15 Dicembre 2024",
+        "title": "Nuovi Standard di Reporting Finanziario",
+        "excerpt": "IAFEI annuncia la collaborazione con organismi contabili internazionali per standard di reporting finanziario migliorati, concentrandosi sull'integrazione ESG e sui framework di divulgazione digitale."
+      },
+      "article2": {
+        "date": "10 Dicembre 2024",
+        "title": "Webinar sulla Trasformazione Finanziaria Digitale",
+        "excerpt": "Unisciti a noi per una sessione completa sulla trasformazione digitale nella finanza. Relatori esperti discuteranno AI, blockchain e il futuro delle operazioni finanziarie."
+      },
+      "article3": {
+        "date": "5 Dicembre 2024",
+        "title": "IAFEI Accoglie Nuovi Istituti Membri",
+        "excerpt": "Siamo lieti di annunciare nuovi istituti membri dai mercati emergenti, rafforzando la nostra comunità globale di dirigenti finanziari."
+      }
+    },
+    "membership": {
+      "title": "Diventa Membro",
+      "subtitle": "Unisciti alla comunità leader nella gestione finanziaria e goditi benefici esclusivi tra cui accesso a ricerche all'avanguardia, opportunità di networking e risorse di sviluppo professionale.",
+      "button": "Scopri di più"
+    }
+  },
+  "pages": {
+    "contact": {
+      "title": "Contattaci",
+      "name": "Nome",
+      "email": "Email",
+      "subject": "Oggetto",
+      "message": "Messaggio",
+      "send": "Invia Messaggio"
     }
   },
   "footer": {
-    "copyright": "© 2025 Associazione Internazionale degli Istituti di Dirigenti Finanziari. Tutti i diritti riservati.",
-    "privacy": "Informativa sulla Privacy",
-    "terms": "Termini di Servizio"
+    "contact": {
+      "title": "Informazioni di Contatto",
+      "chairman": "Presidente",
+      "secretariat": "Segretariato",
+      "support": "Supporto"
+    },
+    "quickLinks": {
+      "title": "Link Rapidi",
+      "about": "Riguardo IAFEI",
+      "members": "Istituti Membri",
+      "news": "Notizie & Eventi",
+      "publications": "Pubblicazioni"
+    },
+    "resources": {
+      "title": "Risorse",
+      "membership": "Membership",
+      "congress": "Congresso Mondiale",
+      "quarterly": "IAFEI Trimestrale",
+      "contact": "Contattaci"
+    },
+    "copyright": "© 2025 Associazione Internazionale degli Istituti di Dirigenti Finanziari. Tutti i diritti riservati."
   },
   "common": {
     "loading": "Caricamento...",
     "error": "Errore nel caricamento del contenuto",
-    "close": "Chiudi",
-    "open": "Apri",
-    "menu": "Menu",
-    "language": "Lingua",
-    "readMore": "Leggi di più",
-    "backToTop": "Torna su"
+    "menu": "Menu"
   }
 }
