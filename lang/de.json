@@ -125,6 +125,7 @@
   "common": {
     "loading": "Wird geladen...",
     "error": "Fehler beim Laden des Inhalts",
-    "menu": "Menü"
+    "menu": "Menü",
+    "language": "Sprache"
   }
 }

@@ -128,6 +128,7 @@
   "common": {
     "loading": "加载中...",
     "error": "内容加载错误",
-    "menu": "菜单"
+    "menu": "菜单",
+    "language": "语言"
   }
 }

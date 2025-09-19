@@ -125,6 +125,7 @@
   "common": {
     "loading": "Caricamento...",
     "error": "Errore nel caricamento del contenuto",
-    "menu": "Menu"
+    "menu": "Menu",
+    "language": "Lingua"
   }
 }
