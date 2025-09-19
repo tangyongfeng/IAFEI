@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IAFEI 多语言测试页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .test-section {
+            background: #f5f5f5;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .language-selector {
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .language-selector button {
+            margin: 5px;
+            padding: 8px 15px;
+            border: 1px solid #ccc;
+            background: white;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .language-selector button:hover {
+            background: #e9e9e9;
+        }
+        .debug-info {
+            background: #333;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 12px;
+            margin-top: 20px;
+        }
+        h1, h2 { color: #003366; }
+        .status { 
+            padding: 10px; 
+            border-radius: 4px; 
+            margin: 10px 0;
+        }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+    </style>
+</head>
+<body>
+    <h1>🌍 IAFEI 多语言功能测试</h1>
+    
+    <div class="language-selector">
+        <h3>语言选择器测试</h3>
+        <button onclick="testLanguage('en')">English</button>
+        <button onclick="testLanguage('zh-cn')">简体中文</button>
+        <button onclick="testLanguage('zh-tw')">繁體中文</button>
+        <button onclick="testLanguage('ja')">日本語</button>
+        <button onclick="testLanguage('de')">Deutsch</button>
+        <button onclick="testLanguage('it')">Italiano</button>
+    </div>
+
+    <div class="test-section">
+        <h2>翻译测试内容</h2>
+        <p><strong>导航首页:</strong> <span data-i18n="navigation.home">Home</span></p>
+        <p><strong>Hero标题:</strong> <span data-i18n="hero.title">IAFEI World Congress 2025</span></p>
+        <p><strong>Hero副标题:</strong> <span data-i18n="hero.subtitle">Advancing Financial Excellence Worldwide</span></p>
+        <p><strong>关于IAFEI:</strong> <span data-i18n="homepage.about.title">About IAFEI</span></p>
+        <p><strong>合作伙伴标题:</strong> <span data-i18n="homepage.partnersTitle">IAFEI Partners</span></p>
+        <p><strong>合作伙伴-埃森哲:</strong> <span data-i18n="homepage.partners.accenture.name">Accenture</span></p>
+        <p><strong>亮点标题:</strong> <span data-i18n="homepage.highlights.title">IAFEI 2025 Highlights</span></p>
+        <p><strong>新闻标题:</strong> <span data-i18n="homepage.news.title">Latest News</span></p>
+        <p><strong>会员标题:</strong> <span data-i18n="homepage.membership.title">Become a Member</span></p>
+        <p><strong>联系我们:</strong> <span data-i18n="navigation.contact">Contact</span></p>
+        <p><strong>版权信息:</strong> <span data-i18n="footer.copyright">&copy; 2025 International Association of Financial Executives Institutes. All rights reserved.</span></p>
+    </div>
+
+    <div class="status" id="status"></div>
+
+    <div class="debug-info" id="debug">
+        调试信息将在这里显示...
+    </div>
+
+    <script src="js/i18n.js"></script>
+    <script>
+        let i18n;
+        
+        // 初始化
+        document.addEventListener('DOMContentLoaded', async function() {
+            const debug = document.getElementById('debug');
+            const status = document.getElementById('status');
+            
+            try {
+                debug.innerHTML = '正在初始化i18n系统...';
+                
+                // 检查i18n类是否存在
+                if (typeof I18nManager === 'undefined') {
+                    throw new Error('I18nManager 类未找到');
+                }
+                
+                debug.innerHTML += '\n✅ I18nManager 类已加载';
+                
+                // 创建实例
+                i18n = new I18nManager();
+                debug.innerHTML += '\n✅ I18nManager 实例已创建';
+                
+                // 初始化
+                await i18n.init();
+                debug.innerHTML += '\n✅ I18n 系统初始化完成';
+                debug.innerHTML += '\n📍 当前语言: ' + i18n.currentLang;
+                debug.innerHTML += '\n📂 支持的语言: ' + Object.keys(i18n.supportedLanguages).join(', ');
+                
+                status.className = 'status success';
+                status.textContent = '✅ 多语言系统初始化成功！现在可以测试语言切换功能。';
+                
+            } catch (error) {
+                debug.innerHTML += '\n❌ 错误: ' + error.message;
+                status.className = 'status error';
+                status.textContent = '❌ 初始化失败: ' + error.message;
+                console.error('初始化错误:', error);
+            }
+        });
+        
+        // 测试语言切换
+        async function testLanguage(lang) {
+            const debug = document.getElementById('debug');
+            const status = document.getElementById('status');
+            
+            try {
+                if (!i18n) {
+                    throw new Error('i18n系统未初始化');
+                }
+                
+                debug.innerHTML += '\n\n🔄 切换到语言: ' + lang;
+                
+                await i18n.setLanguage(lang);
+                
+                debug.innerHTML += '\n✅ 语言切换成功: ' + lang;
+                debug.innerHTML += '\n📝 当前翻译键数量: ' + Object.keys(i18n.translations || {}).length;
+                
+                status.className = 'status success';
+                status.textContent = '✅ 已切换到: ' + i18n.supportedLanguages[lang];
+                
+                // 测试特定翻译
+                const testKey = 'navigation.home';
+                const translation = i18n.getTranslation(testKey);
+                debug.innerHTML += '\n🧪 测试翻译 "' + testKey + '": ' + translation;
+                
+            } catch (error) {
+                debug.innerHTML += '\n❌ 语言切换错误: ' + error.message;
+                status.className = 'status error';
+                status.textContent = '❌ 切换失败: ' + error.message;
+                console.error('语言切换错误:', error);
+            }
+        }
+    </script>
+</body>
+</html>
