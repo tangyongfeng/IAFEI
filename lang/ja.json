@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "lang": "ja",
+    "htmlLang": "ja",
+    "name": "日本語",
+    "title": "IAFEI - 国際財務役員協会連合会"
+  },
+  "navigation": {
+    "home": "ホーム",
+    "about": "私たちについて",
+    "history": "歴史",
+    "officers": "役員",
+    "bylaws": "定款",
+    "technical": "技術委員会",
+    "conduct": "行動規範",
+    "members": "会員機関",
+    "news": "ニュース・イベント",
+    "publications": "出版物",
+    "contact": "お問い合わせ"
+  },
+  "hero": {
+    "title": "IAFEI 2025年世界大会",
+    "subtitle": "世界の財務エクセレンスの向上",
+    "learnMore": "詳細はこちら",
+    "aboutIAFEI": "IAFEIについて"
+  },
+  "homepage": {
+    "about": {
+      "title": "IAFEIについて",
+      "description": "国際財務役員協会連合会（IAFEI）は、世界各国の財務役員専門組織を結集しています。",
+      "founded": "IAFEIは1969年に設立され、世界中の財務役員の専門開発、ネットワーキング、知識共有のためのグローバルプラットフォームとして機能しています。"
+    },
+    "mission": {
+      "title": "私たちの使命",
+      "description": "教育、認定、専門開発プログラムを通じて世界の財務管理専門職を向上させ、世界中の財務役員のスキルと知識を向上させることです。"
+    },
+    "members": {
+      "title": "グローバルネットワーク",
+      "description": "IAFEIは、米国、日本、中国、ドイツなどの主要経済国の専門組織を代表し、真の国際的な財務専門家ネットワークを構築しています。"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 国際財務役員協会連合会。全権利留保。",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約"
+  },
+  "common": {
+    "loading": "読み込み中...",
+    "error": "コンテンツの読み込みエラー",
+    "close": "閉じる",
+    "open": "開く",
+    "menu": "メニュー",
+    "language": "言語",
+    "readMore": "続きを読む",
+    "backToTop": "トップに戻る"
+  }
+}

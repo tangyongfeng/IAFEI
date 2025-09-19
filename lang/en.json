@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "lang": "en",
+    "htmlLang": "en",
+    "name": "English",
+    "title": "IAFEI - International Association of Financial Executives Institutes"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "history": "History",
+    "officers": "Officers",
+    "bylaws": "By-Laws", 
+    "technical": "Technical Committee",
+    "conduct": "Code of Conduct",
+    "members": "Members",
+    "news": "News & Events",
+    "publications": "Publications",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "IAFEI World Congress 2025",
+    "subtitle": "Advancing Financial Excellence Worldwide",
+    "learnMore": "Learn More",
+    "aboutIAFEI": "About IAFEI"
+  },
+  "homepage": {
+    "about": {
+      "title": "About IAFEI",
+      "description": "The International Association of Financial Executives Institutes (IAFEI) brings together national professional organizations of financial executives from around the world.",
+      "founded": "Founded in 1969, IAFEI serves as a global platform for professional development, networking, and knowledge sharing among financial executives worldwide."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "To advance the profession of financial management worldwide through education, certification, and professional development programs that enhance the skills and knowledge of financial executives globally."
+    },
+    "members": {
+      "title": "Global Network",
+      "description": "IAFEI represents professional organizations from major economies including the United States, Japan, China, Germany, and many other countries, creating a truly international network of financial professionals."
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 International Association of Financial Executives Institutes. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "pages": {
+    "about": {
+      "title": "About IAFEI",
+      "mission": "Our Mission",
+      "history": "Our History",
+      "founded": "Founded in 1969",
+      "description": "IAFEI represents the collective voice of financial executives worldwide."
+    },
+    "members": {
+      "title": "Member Organizations",
+      "description": "IAFEI brings together leading financial executive organizations from around the world."
+    },
+    "news": {
+      "title": "News & Events",
+      "worldCongress": "World Congress",
+      "latest": "Latest News"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send Message",
+      "required": "Required field"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error loading content",
+    "close": "Close",
+    "open": "Open",
+    "menu": "Menu",
+    "language": "Language",
+    "readMore": "Read More",
+    "backToTop": "Back to Top"
+  }
+}

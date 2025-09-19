@@ -154,29 +154,29 @@
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="index.html" class="nav-link active" data-i18n="navigation.home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="pages/about.html" class="nav-link">About</a>
+                    <a href="pages/about.html" class="nav-link" data-i18n="navigation.about">About</a>
                     <div class="dropdown">
-                        <a href="pages/history.html" class="dropdown-link">History</a>
-                        <a href="pages/officers.html" class="dropdown-link">Officers</a>
-                        <a href="pages/bylaws.html" class="dropdown-link">By-Laws</a>
-                        <a href="pages/technical-committee.html" class="dropdown-link">Technical Committee</a>
-                        <a href="pages/code-conduct.html" class="dropdown-link">Code of Conduct</a>
+                        <a href="pages/history.html" class="dropdown-link" data-i18n="navigation.history">History</a>
+                        <a href="pages/officers.html" class="dropdown-link" data-i18n="navigation.officers">Officers</a>
+                        <a href="pages/bylaws.html" class="dropdown-link" data-i18n="navigation.bylaws">By-Laws</a>
+                        <a href="pages/technical-committee.html" class="dropdown-link" data-i18n="navigation.technical">Technical Committee</a>
+                        <a href="pages/code-conduct.html" class="dropdown-link" data-i18n="navigation.conduct">Code of Conduct</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a href="pages/members.html" class="nav-link">Members</a>
+                    <a href="pages/members.html" class="nav-link" data-i18n="navigation.members">Members</a>
                 </li>
                 <li class="nav-item">
-                    <a href="pages/news.html" class="nav-link">News & Events</a>
+                    <a href="pages/news.html" class="nav-link" data-i18n="navigation.news">News & Events</a>
                 </li>
                 <li class="nav-item">
-                    <a href="pages/publications.html" class="nav-link">Publications</a>
+                    <a href="pages/publications.html" class="nav-link" data-i18n="navigation.publications">Publications</a>
                 </li>
                 <li class="nav-item">
-                    <a href="pages/contact.html" class="nav-link">Contact</a>
+                    <a href="pages/contact.html" class="nav-link" data-i18n="navigation.contact">Contact</a>
                 </li>
             </ul>
         </div>
@@ -186,11 +186,11 @@
         <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content">
-            <h1>IAFEI World Congress 2025</h1>
-            <p>Advancing Financial Excellence Worldwide</p>
+            <h1 data-i18n="hero.title">IAFEI World Congress 2025</h1>
+            <p data-i18n="hero.subtitle">Advancing Financial Excellence Worldwide</p>
             <div class="hero-buttons">
-                <a href="pages/news.html" class="btn-primary">Learn More</a>
-                <a href="pages/about.html" class="btn-secondary">About IAFEI</a>
+                <a href="pages/news.html" class="btn-primary" data-i18n="hero.learnMore">Learn More</a>
+                <a href="pages/about.html" class="btn-secondary" data-i18n="hero.aboutIAFEI">About IAFEI</a>
             </div>
             <!-- Mobile Test Link -->
             <div style="margin-top: 1rem;">
@@ -233,15 +233,17 @@
     <!-- What is IAFEI Section -->
     <section class="section">
         <div class="container">
-            <h2 class="section-title">What is IAFEI?</h2>
+            <h2 class="section-title" data-i18n="homepage.about.title">About IAFEI</h2>
             <div class="text-center" style="max-width: 900px; margin: 0 auto;">
-                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; font-family: var(--body-font);">
-                    The International Association of Financial Executives Institutes (IAFEI) is dedicated to advancing the profession of financial management worldwide. Our mission is to promote excellence in financial leadership, facilitate knowledge exchange, and drive innovation in corporate finance practices.
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; font-family: var(--body-font);" 
+                   data-i18n="homepage.about.description">
+                    The International Association of Financial Executives Institutes (IAFEI) brings together national professional organizations of financial executives from around the world.
                 </p>
-                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; font-family: var(--body-font);">
-                    Since our establishment in 1969, IAFEI has been the premier platform for financial executives, CFOs, and organizations to share best practices, discuss emerging trends, and shape the future of financial management across industries and borders.
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; font-family: var(--body-font);" 
+                   data-i18n="homepage.about.founded">
+                    Founded in 1969, IAFEI serves as a global platform for professional development, networking, and knowledge sharing among financial executives worldwide.
                 </p>
-                <a href="pages/about.html" class="btn-secondary">Learn About Our History</a>
+                <a href="pages/about.html" class="btn-secondary" data-i18n="navigation.history">Learn About Our History</a>
             </div>
         </div>
     </section>
@@ -340,11 +342,12 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 International Association of Financial Executives Institutes (IAFEI). All rights reserved.</p>
+                <p data-i18n="footer.copyright">&copy; 2025 International Association of Financial Executives Institutes. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

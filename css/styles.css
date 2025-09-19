@@ -888,3 +888,197 @@ tr:hover {
         display: none !important;
     }
 }
+
+/* =================================
+   LANGUAGE SELECTOR
+   ================================= */
+
+.language-selector {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999;
+    font-family: 'Lora', serif;
+}
+
+.language-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    font-size: 0.9rem;
+    font-weight: 500;
+    min-width: 120px;
+    justify-content: space-between;
+}
+
+.language-toggle:hover {
+    background: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.language-toggle.active {
+    background: var(--accent-color);
+    border-radius: 25px 25px 8px 8px;
+}
+
+.language-toggle.loading {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.language-toggle.loading .language-arrow {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.language-icon {
+    font-size: 1.1rem;
+}
+
+.language-current {
+    flex: 1;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.language-arrow {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.language-toggle.active .language-arrow {
+    transform: rotate(180deg);
+}
+
+.language-dropdown {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid #e0e0e0;
+    border-bottom: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.language-dropdown.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.language-option {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    border: none;
+    background: transparent;
+    color: var(--text-color);
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+    font-family: inherit;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.language-option:hover {
+    background: #f8f9fa;
+    color: var(--primary-color);
+}
+
+.language-option.active {
+    background: var(--primary-color);
+    color: white;
+    font-weight: 600;
+}
+
+.language-option.active:hover {
+    background: var(--accent-color);
+}
+
+.language-option:last-child {
+    border-bottom: none;
+    border-radius: 0 0 8px 8px;
+}
+
+.language-option:first-child {
+    border-radius: 8px 8px 0 0;
+}
+
+/* 移动端语言选择器调整 */
+@media (max-width: 768px) {
+    .language-selector {
+        bottom: 80px; /* 避免与移动开发工具栏重叠 */
+        left: 15px;
+    }
+    
+    .language-toggle {
+        padding: 10px 14px;
+        font-size: 0.85rem;
+        min-width: 100px;
+    }
+    
+    .language-dropdown {
+        max-height: 250px;
+    }
+    
+    .language-option {
+        padding: 10px 14px;
+        font-size: 0.85rem;
+    }
+}
+
+/* 语言相关的辅助类 */
+.rtl {
+    direction: rtl;
+}
+
+.rtl .language-selector {
+    left: auto;
+    right: 20px;
+}
+
+@media (max-width: 768px) {
+    .rtl .language-selector {
+        right: 15px;
+    }
+}
+
+/* 语言选择器的无障碍改进 */
+.language-toggle:focus,
+.language-option:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* 高对比度模式支持 */
+@media (prefers-contrast: high) {
+    .language-toggle {
+        border: 2px solid currentColor;
+    }
+    
+    .language-dropdown {
+        border: 2px solid var(--primary-color);
+    }
+}

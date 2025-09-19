@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "lang": "zh-cn",
+    "htmlLang": "zh-CN",
+    "name": "简体中文",
+    "title": "IAFEI - 国际财务主管协会联合会"
+  },
+  "navigation": {
+    "home": "首页",
+    "about": "关于我们",
+    "history": "历史沿革",
+    "officers": "领导团队",
+    "bylaws": "章程制度",
+    "technical": "技术委员会",
+    "conduct": "行为准则",
+    "members": "成员机构",
+    "news": "新闻动态",
+    "publications": "出版物",
+    "contact": "联系我们"
+  },
+  "hero": {
+    "title": "IAFEI 2025年世界大会",
+    "subtitle": "推进全球财务卓越发展",
+    "learnMore": "了解更多",
+    "aboutIAFEI": "关于IAFEI"
+  },
+  "homepage": {
+    "about": {
+      "title": "关于IAFEI",
+      "description": "国际财务主管协会联合会（IAFEI）汇聚了来自世界各国的财务主管专业组织。",
+      "founded": "IAFEI成立于1969年，是全球财务主管专业发展、网络建设和知识分享的国际平台。"
+    },
+    "mission": {
+      "title": "我们的使命",
+      "description": "通过教育、认证和专业发展项目推进全球财务管理专业发展，提升全球财务主管的技能和知识水平。"
+    },
+    "members": {
+      "title": "全球网络",
+      "description": "IAFEI代表来自美国、日本、中国、德国等主要经济体的专业组织，构建了真正的国际财务专业人士网络。"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 国际财务主管协会联合会。保留所有权利。",
+    "privacy": "隐私政策",
+    "terms": "服务条款"
+  },
+  "pages": {
+    "about": {
+      "title": "关于IAFEI",
+      "mission": "我们的使命",
+      "history": "我们的历史",
+      "founded": "成立于1969年",
+      "description": "IAFEI代表着全球财务主管的集体声音。"
+    },
+    "members": {
+      "title": "成员机构",
+      "description": "IAFEI汇聚了来自世界各地的领先财务主管组织。"
+    },
+    "news": {
+      "title": "新闻动态",
+      "worldCongress": "世界大会",
+      "latest": "最新消息"
+    },
+    "contact": {
+      "title": "联系我们",
+      "name": "姓名",
+      "email": "电子邮箱",
+      "message": "留言",
+      "send": "发送消息",
+      "required": "必填项"
+    }
+  },
+  "common": {
+    "loading": "加载中...",
+    "error": "内容加载错误",
+    "close": "关闭",
+    "open": "打开",
+    "menu": "菜单",
+    "language": "语言",
+    "readMore": "阅读更多",
+    "backToTop": "返回顶部"
+  }
+}

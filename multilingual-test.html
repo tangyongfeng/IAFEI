@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IAFEI - Multilingual Test</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Lora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .test-section {
+            background: white;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .language-info {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-family: monospace;
+        }
+        
+        .test-button {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 0.5rem;
+            transition: background 0.3s;
+        }
+        
+        .test-button:hover {
+            background: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">💼</div>
+                <a href="index.html" class="logo-text">IAFEI</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link" data-i18n="navigation.home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/about.html" class="nav-link" data-i18n="navigation.about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/members.html" class="nav-link" data-i18n="navigation.members">Members</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/news.html" class="nav-link" data-i18n="navigation.news">News & Events</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/contact.html" class="nav-link" data-i18n="navigation.contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div style="padding-top: 80px;">
+        <div class="test-container">
+            <div class="test-section">
+                <h1>🌍 IAFEI 多语言功能测试</h1>
+                <p>测试IAFEI网站的多语言国际化功能</p>
+                
+                <div class="language-info">
+                    <div><strong>当前语言:</strong> <span id="currentLang">检测中...</span></div>
+                    <div><strong>支持语言:</strong> English, 简体中文, 繁體中文, 日本語, Deutsch, Italiano</div>
+                    <div><strong>浏览器语言:</strong> <span id="browserLang"></span></div>
+                </div>
+            </div>
+
+            <div class="test-section">
+                <h2 data-i18n="navigation.home">导航测试</h2>
+                <p>以下导航项目应该根据选择的语言动态更新：</p>
+                <ul>
+                    <li><span data-i18n="navigation.home">Home</span> → 首页 / ホーム / Startseite</li>
+                    <li><span data-i18n="navigation.about">About</span> → 关于我们 / 私たちについて / Über uns</li>
+                    <li><span data-i18n="navigation.members">Members</span> → 成员机构 / 会員機関 / Mitglieder</li>
+                    <li><span data-i18n="navigation.contact">Contact</span> → 联系我们 / お問い合わせ / Kontakt</li>
+                </ul>
+            </div>
+
+            <div class="test-section">
+                <h2>主要内容测试</h2>
+                <h3 data-i18n="hero.title">IAFEI World Congress 2025</h3>
+                <p data-i18n="hero.subtitle">Advancing Financial Excellence Worldwide</p>
+                
+                <div style="margin: 1rem 0;">
+                    <button class="test-button" data-i18n="hero.learnMore">Learn More</button>
+                    <button class="test-button" data-i18n="hero.aboutIAFEI">About IAFEI</button>
+                </div>
+            </div>
+
+            <div class="test-section">
+                <h2>测试功能</h2>
+                <p>使用左下角的语言选择器测试以下功能：</p>
+                <ol>
+                    <li>点击语言选择器查看支持的语言列表</li>
+                    <li>选择不同语言查看内容变化</li>
+                    <li>检查页面标题是否更新</li>
+                    <li>检查HTML lang属性是否正确设置</li>
+                    <li>刷新页面验证语言设置是否保持</li>
+                </ol>
+            </div>
+
+            <div class="test-section">
+                <h2>语言切换测试</h2>
+                <p>快速测试按钮：</p>
+                <button class="test-button" onclick="window.i18n?.switchLanguage('en')">English</button>
+                <button class="test-button" onclick="window.i18n?.switchLanguage('zh-cn')">简体中文</button>
+                <button class="test-button" onclick="window.i18n?.switchLanguage('zh-tw')">繁體中文</button>
+                <button class="test-button" onclick="window.i18n?.switchLanguage('ja')">日本語</button>
+                <button class="test-button" onclick="window.i18n?.switchLanguage('de')">Deutsch</button>
+                <button class="test-button" onclick="window.i18n?.switchLanguage('it')">Italiano</button>
+            </div>
+
+            <div class="test-section">
+                <h2>页面间导航测试</h2>
+                <p>测试在不同页面间切换时语言设置的保持：</p>
+                <div>
+                    <a href="index.html" class="test-button">返回主页</a>
+                    <a href="pages/contact.html" class="test-button">联系页面</a>
+                    <a href="mobile-test.html" class="test-button">移动测试</a>
+                </div>
+                <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">
+                    <strong>注意:</strong> 切换语言后导航到其他页面，验证选择的语言是否保持。
+                </p>
+            </div>
+
+            <div class="test-section">
+                <h2>调试信息</h2>
+                <div id="debugInfo" class="language-info">
+                    <div>初始化状态: <span id="initStatus">等待中...</span></div>
+                    <div>翻译加载状态: <span id="loadStatus">未开始</span></div>
+                    <div>错误日志: <span id="errorLog">无</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // 显示浏览器语言
+        document.getElementById('browserLang').textContent = navigator.language;
+        
+        // 监听语言切换事件
+        document.addEventListener('languageChanged', function(event) {
+            const { newLang, oldLang } = event.detail;
+            console.log(`语言从 ${oldLang} 切换到 ${newLang}`);
+            updateDebugInfo();
+        });
+        
+        // 更新调试信息
+        function updateDebugInfo() {
+            if (window.i18n) {
+                document.getElementById('currentLang').textContent = 
+                    window.i18n.getCurrentLanguage() + ' - ' + 
+                    window.i18n.getSupportedLanguages()[window.i18n.getCurrentLanguage()];
+                document.getElementById('initStatus').textContent = '已初始化';
+                document.getElementById('loadStatus').textContent = '已加载';
+            }
+        }
+        
+        // 页面加载完成后更新信息
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(updateDebugInfo, 1000); // 等待i18n初始化完成
+        });
+    </script>
+</body>
+</html>

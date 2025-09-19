@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "lang": "zh-tw",
+    "htmlLang": "zh-TW",
+    "name": "繁體中文",
+    "title": "IAFEI - 國際財務主管協會聯合會"
+  },
+  "navigation": {
+    "home": "首頁",
+    "about": "關於我們",
+    "history": "歷史沿革",
+    "officers": "領導團隊",
+    "bylaws": "章程制度",
+    "technical": "技術委員會",
+    "conduct": "行為準則",
+    "members": "會員機構",
+    "news": "新聞動態",
+    "publications": "出版物",
+    "contact": "聯絡我們"
+  },
+  "hero": {
+    "title": "IAFEI 2025年世界大會",
+    "subtitle": "推進全球財務卓越發展",
+    "learnMore": "了解更多",
+    "aboutIAFEI": "關於IAFEI"
+  },
+  "homepage": {
+    "about": {
+      "title": "關於IAFEI",
+      "description": "國際財務主管協會聯合會（IAFEI）匯聚了來自世界各國的財務主管專業組織。",
+      "founded": "IAFEI成立於1969年，是全球財務主管專業發展、網絡建設和知識分享的國際平台。"
+    },
+    "mission": {
+      "title": "我們的使命",
+      "description": "透過教育、認證和專業發展項目推進全球財務管理專業發展，提升全球財務主管的技能和知識水平。"
+    },
+    "members": {
+      "title": "全球網絡",
+      "description": "IAFEI代表來自美國、日本、中國、德國等主要經濟體的專業組織，構建了真正的國際財務專業人士網絡。"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 國際財務主管協會聯合會。保留所有權利。",
+    "privacy": "隱私政策",
+    "terms": "服務條款"
+  },
+  "common": {
+    "loading": "載入中...",
+    "error": "內容載入錯誤",
+    "close": "關閉",
+    "open": "打開",
+    "menu": "選單",
+    "language": "語言",
+    "readMore": "閱讀更多",
+    "backToTop": "返回頂部"
+  }
+}

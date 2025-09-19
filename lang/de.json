@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "lang": "de",
+    "htmlLang": "de",
+    "name": "Deutsch",
+    "title": "IAFEI - Internationale Vereinigung der Finanzführungskräfte-Institute"
+  },
+  "navigation": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "history": "Geschichte",
+    "officers": "Führungskräfte",
+    "bylaws": "Satzung",
+    "technical": "Technisches Komitee",
+    "conduct": "Verhaltenskodex",
+    "members": "Mitgliedsorganisationen",
+    "news": "Nachrichten & Veranstaltungen",
+    "publications": "Publikationen",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "IAFEI Weltkongress 2025",
+    "subtitle": "Förderung der Finanzexzellenz weltweit",
+    "learnMore": "Mehr erfahren",
+    "aboutIAFEI": "Über IAFEI"
+  },
+  "homepage": {
+    "about": {
+      "title": "Über IAFEI",
+      "description": "Die Internationale Vereinigung der Finanzführungskräfte-Institute (IAFEI) bringt nationale Berufsorganisationen von Finanzführungskräften aus der ganzen Welt zusammen.",
+      "founded": "IAFEI wurde 1969 gegründet und dient als globale Plattform für berufliche Entwicklung, Networking und Wissensaustausch unter Finanzführungskräften weltweit."
+    },
+    "mission": {
+      "title": "Unsere Mission",
+      "description": "Die Förderung des Finanzmanagement-Berufs weltweit durch Bildung, Zertifizierung und berufliche Entwicklungsprogramme, die die Fähigkeiten und das Wissen von Finanzführungskräften global verbessern."
+    },
+    "members": {
+      "title": "Globales Netzwerk",
+      "description": "IAFEI vertritt Berufsorganisationen aus wichtigen Volkswirtschaften wie den USA, Japan, China, Deutschland und vielen anderen Ländern und schafft ein wahrhaft internationales Netzwerk von Finanzfachleuten."
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Internationale Vereinigung der Finanzführungskräfte-Institute. Alle Rechte vorbehalten.",
+    "privacy": "Datenschutzrichtlinie",
+    "terms": "Nutzungsbedingungen"
+  },
+  "common": {
+    "loading": "Wird geladen...",
+    "error": "Fehler beim Laden des Inhalts",
+    "close": "Schließen",
+    "open": "Öffnen",
+    "menu": "Menü",
+    "language": "Sprache",
+    "readMore": "Weiterlesen",
+    "backToTop": "Nach oben"
+  }
+}

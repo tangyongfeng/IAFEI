@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "lang": "it",
+    "htmlLang": "it",
+    "name": "Italiano",
+    "title": "IAFEI - Associazione Internazionale degli Istituti di Dirigenti Finanziari"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "Chi siamo",
+    "history": "Storia",
+    "officers": "Dirigenti",
+    "bylaws": "Statuto",
+    "technical": "Comitato Tecnico",
+    "conduct": "Codice di Condotta",
+    "members": "Organizzazioni membri",
+    "news": "Notizie ed Eventi",
+    "publications": "Pubblicazioni",
+    "contact": "Contatti"
+  },
+  "hero": {
+    "title": "Congresso Mondiale IAFEI 2025",
+    "subtitle": "Promuovere l'Eccellenza Finanziaria nel Mondo",
+    "learnMore": "Scopri di più",
+    "aboutIAFEI": "Chi è IAFEI"
+  },
+  "homepage": {
+    "about": {
+      "title": "Chi è IAFEI",
+      "description": "L'Associazione Internazionale degli Istituti di Dirigenti Finanziari (IAFEI) riunisce le organizzazioni professionali nazionali di dirigenti finanziari di tutto il mondo.",
+      "founded": "Fondata nel 1969, IAFEI serve come piattaforma globale per lo sviluppo professionale, il networking e la condivisione di conoscenze tra dirigenti finanziari in tutto il mondo."
+    },
+    "mission": {
+      "title": "La nostra Missione",
+      "description": "Promuovere la professione della gestione finanziaria in tutto il mondo attraverso programmi di educazione, certificazione e sviluppo professionale che migliorano le competenze e le conoscenze dei dirigenti finanziari a livello globale."
+    },
+    "members": {
+      "title": "Rete Globale",
+      "description": "IAFEI rappresenta organizzazioni professionali delle principali economie tra cui Stati Uniti, Giappone, Cina, Germania e molti altri paesi, creando una rete veramente internazionale di professionisti finanziari."
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Associazione Internazionale degli Istituti di Dirigenti Finanziari. Tutti i diritti riservati.",
+    "privacy": "Informativa sulla Privacy",
+    "terms": "Termini di Servizio"
+  },
+  "common": {
+    "loading": "Caricamento...",
+    "error": "Errore nel caricamento del contenuto",
+    "close": "Chiudi",
+    "open": "Apri",
+    "menu": "Menu",
+    "language": "Lingua",
+    "readMore": "Leggi di più",
+    "backToTop": "Torna su"
+  }
+}
