@@ -129,6 +129,225 @@
     "loading": "Loading...",
     "error": "Error loading content",
     "menu": "Menu",
-    "language": "Language"
+    "language": "Language",
+    "backToAbout": "Back to About",
+    "backToHome": "Back to Home"
+  },
+  "bylaws": {
+    "title": "IAFEI By-Laws",
+    "subtitle": "Governing principles and operational framework of the International Association of Financial Executives Institutes",
+    "introduction": {
+      "title": "Introduction",
+      "content": "The By-Laws of the International Association of Financial Executives Institutes (IAFEI) establish the fundamental principles, governance structure, and operational procedures that guide our organization in advancing financial excellence worldwide."
+    },
+    "membership": {
+      "title": "Article I - Membership",
+      "eligibility": {
+        "title": "Section 1 - Eligibility",
+        "content": "Membership in IAFEI is open to national and regional associations of financial executives that demonstrate commitment to professional excellence and ethical standards in financial management."
+      },
+      "obligations": {
+        "title": "Section 2 - Member Obligations",
+        "content": "Member organizations shall maintain professional standards, participate in IAFEI activities, and contribute to the advancement of financial management practices within their respective regions."
+      }
+    },
+    "governance": {
+      "title": "Article II - Governance Structure",
+      "board": {
+        "title": "Section 1 - Board of Directors",
+        "content": "The Board of Directors shall consist of representatives from member organizations, including a Chairman, Vice-Chairman, and regional representatives, elected for specified terms as outlined in the governance procedures."
+      },
+      "officers": {
+        "title": "Section 2 - Officers",
+        "content": "IAFEI officers include the Chairman, Vice-Chairman, Secretary, Treasurer, and regional representatives, each with specific responsibilities for organizational leadership and regional coordination."
+      }
+    },
+    "congress": {
+      "title": "Article III - World Congress",
+      "content": "The IAFEI World Congress shall convene annually, rotating among member regions, to facilitate knowledge sharing, professional development, and strategic planning for the advancement of financial management practices globally."
+    },
+    "committees": {
+      "title": "Article IV - Committees",
+      "content": "IAFEI may establish technical committees and working groups to address specific aspects of financial management, professional development, and industry challenges as deemed necessary by the Board of Directors."
+    },
+    "amendments": {
+      "title": "Article V - Amendments",
+      "content": "These By-Laws may be amended by a majority vote of the Board of Directors, with proposed amendments circulated to all member organizations at least 30 days prior to the vote."
+    }
+  },
+  "technical": {
+    "title": "IAFEI Technical Committee",
+    "subtitle": "Advancing financial management practices through technical expertise and industry insights",
+    "overview": {
+      "title": "Committee Overview",
+      "content": "The IAFEI Technical Committee serves as the primary body for developing and disseminating best practices in financial management, accounting standards, and emerging technologies that impact the profession globally."
+    },
+    "mission": {
+      "title": "🎯 Mission",
+      "content": "To provide technical guidance and thought leadership on contemporary financial management issues, ensuring IAFEI members stay at the forefront of professional practice."
+    },
+    "scope": {
+      "title": "🔍 Scope of Work",
+      "content": "The committee addresses accounting standards, financial reporting, risk management, digital transformation, sustainability reporting, and regulatory compliance matters."
+    },
+    "collaboration": {
+      "title": "🤝 Global Collaboration",
+      "content": "Working closely with international standard-setting bodies, regulatory authorities, and academic institutions to ensure global perspectives in technical recommendations."
+    },
+    "activities": {
+      "title": "Key Activities",
+      "area": "Focus Area",
+      "description": "Description",
+      "deliverables": "Key Deliverables",
+      "standards": {
+        "area": "Standards Development",
+        "description": "Contributing to the development and implementation of international financial reporting standards",
+        "deliverables": "Position papers, implementation guides"
+      },
+      "research": {
+        "area": "Research & Analysis",
+        "description": "Conducting research on emerging trends and technologies in financial management",
+        "deliverables": "Research reports, white papers"
+      },
+      "education": {
+        "area": "Professional Education",
+        "description": "Developing educational materials and training programs for financial executives",
+        "deliverables": "Training modules, webinars"
+      },
+      "advisory": {
+        "area": "Advisory Services",
+        "description": "Providing technical advice to member organizations on complex financial matters",
+        "deliverables": "Technical bulletins, guidance notes"
+      }
+    },
+    "focus": {
+      "title": "Current Focus Areas",
+      "digital": {
+        "title": "Digital Transformation",
+        "content": "Examining the impact of AI, blockchain, and automation on financial management practices and reporting."
+      },
+      "sustainability": {
+        "title": "Sustainability Reporting",
+        "content": "Developing frameworks for ESG reporting and integrated thinking in financial management."
+      },
+      "governance": {
+        "title": "Risk & Governance",
+        "content": "Enhancing risk management frameworks and corporate governance practices for financial executives."
+      }
+    },
+    "membership": {
+      "title": "Committee Membership",
+      "content": "The Technical Committee comprises distinguished financial executives, academics, and subject matter experts from IAFEI member organizations worldwide. Members serve three-year terms and contribute their expertise to advance the profession.",
+      "criteria": {
+        "title": "Membership Criteria",
+        "experience": "Extensive experience in financial management or related fields",
+        "expertise": "Recognized expertise in specific technical areas",
+        "commitment": "Commitment to advancing professional standards and practices",
+        "participation": "Active participation in committee activities and initiatives"
+      }
+    }
+  },
+  "conduct": {
+    "title": "IAFEI Code of Professional Conduct",
+    "subtitle": "Ethical standards and professional principles guiding financial executives worldwide",
+    "preamble": {
+      "title": "Preamble",
+      "content": "The International Association of Financial Executives Institutes (IAFEI) is committed to the highest standards of professional conduct and ethical behavior. This Code of Professional Conduct establishes the fundamental principles that guide our members in their professional responsibilities and interactions."
+    },
+    "principles": {
+      "title": "Fundamental Principles",
+      "integrity": {
+        "title": "Integrity",
+        "content": "Members must act with honesty, fairness, and truthfulness in all professional and business relationships."
+      },
+      "objectivity": {
+        "title": "Objectivity",
+        "content": "Members must not allow bias, conflicts of interest, or undue influence to override professional judgment."
+      },
+      "competence": {
+        "title": "Professional Competence",
+        "content": "Members must maintain professional knowledge and skill at the level required to ensure competent professional service."
+      },
+      "confidentiality": {
+        "title": "Confidentiality",
+        "content": "Members must respect the confidentiality of information acquired in professional relationships."
+      },
+      "behavior": {
+        "title": "Professional Behavior",
+        "content": "Members must comply with relevant laws and regulations and avoid actions that discredit the profession."
+      }
+    },
+    "responsibilities": {
+      "title": "Professional Responsibilities",
+      "public": {
+        "title": "To the Public",
+        "transparency": "Maintain transparency in financial reporting and communications",
+        "standards": "Uphold the highest standards of financial management and reporting",
+        "trust": "Protect the public trust placed in the financial management profession"
+      },
+      "employers": {
+        "title": "To Employers and Organizations",
+        "loyalty": "Act with loyalty and in the best interests of the organization",
+        "conflicts": "Avoid conflicts of interest and disclose potential conflicts",
+        "resources": "Use organizational resources responsibly and efficiently"
+      },
+      "profession": {
+        "title": "To the Profession",
+        "development": "Contribute to the development and advancement of the profession",
+        "standards": "Support the establishment and maintenance of professional standards",
+        "colleagues": "Treat colleagues with respect and professionalism"
+      }
+    },
+    "guidelines": {
+      "title": "Specific Guidelines",
+      "area": "Area",
+      "requirement": "Requirement",
+      "examples": "Examples",
+      "financial": {
+        "area": "Financial Reporting",
+        "requirement": "Ensure accuracy, completeness, and compliance with applicable standards",
+        "examples": "IFRS compliance, accurate disclosures, timely reporting"
+      },
+      "risk": {
+        "area": "Risk Management",
+        "requirement": "Identify, assess, and manage risks appropriately",
+        "examples": "Internal controls, risk assessment, mitigation strategies"
+      },
+      "governance": {
+        "area": "Corporate Governance",
+        "requirement": "Support effective governance structures and processes",
+        "examples": "Board reporting, audit committee support, compliance programs"
+      },
+      "technology": {
+        "area": "Technology & Data",
+        "requirement": "Protect data integrity and ensure appropriate use of technology",
+        "examples": "Data security, system controls, technology governance"
+      }
+    },
+    "compliance": {
+      "title": "Compliance and Enforcement",
+      "overview": "IAFEI member organizations are expected to adopt and enforce this Code of Professional Conduct within their respective jurisdictions and membership communities. This includes:",
+      "education": "Providing education and training on ethical standards",
+      "monitoring": "Monitoring compliance with professional standards",
+      "investigation": "Investigating allegations of professional misconduct",
+      "sanctions": "Imposing appropriate sanctions for violations",
+      "support": "Supporting members in ethical decision-making"
+    },
+    "resources": {
+      "title": "Resources and Support",
+      "content": "IAFEI provides various resources to support members in maintaining the highest ethical standards:",
+      "guidance": {
+        "title": "📋 Ethics Guidance",
+        "content": "Technical bulletins and guidance notes on ethical dilemmas and professional conduct issues."
+      },
+      "training": {
+        "title": "🎓 Training Programs",
+        "content": "Professional development programs focused on ethics and professional conduct."
+      },
+      "consultation": {
+        "title": "💬 Consultation Services",
+        "content": "Access to expert advice on complex ethical and professional conduct matters."
+      }
+    }
   }
 }

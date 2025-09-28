@@ -129,6 +129,32 @@
     "loading": "加载中...",
     "error": "内容加载错误",
     "menu": "菜单",
-    "language": "语言"
+    "language": "语言",
+    "backToAbout": "返回关于我们",
+    "backToHome": "返回首页"
+  },
+  "bylaws": {
+    "title": "IAFEI 章程细则",
+    "subtitle": "国际财务总监协会联合会的治理原则和运营框架",
+    "introduction": {
+      "title": "引言",
+      "content": "国际财务总监协会联合会（IAFEI）章程细则确立了指导我们组织推进全球财务卓越发展的基本原则、治理结构和运营程序。"
+    }
+  },
+  "technical": {
+    "title": "IAFEI 技术委员会",
+    "subtitle": "通过技术专长和行业洞察推进财务管理实践",
+    "overview": {
+      "title": "委员会概述",
+      "content": "IAFEI技术委员会是制定和传播财务管理、会计准则和影响全球专业的新兴技术最佳实践的主要机构。"
+    }
+  },
+  "conduct": {
+    "title": "IAFEI 职业行为准则",
+    "subtitle": "指导全球财务高管的道德标准和职业原则",
+    "preamble": {
+      "title": "序言",
+      "content": "国际财务总监协会联合会（IAFEI）致力于最高标准的职业操守和道德行为。本职业行为准则确立了指导我们会员履行职业责任和互动的基本原则。"
+    }
   }
 }

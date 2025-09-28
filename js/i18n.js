@@ -23,29 +23,57 @@ class I18nManager {
      */
     async init() {
         try {
+            console.log('🚀 Starting i18n initialization...');
+            
             // 检测用户首选语言
             this.currentLanguage = this.detectLanguage();
+            console.log(`🔍 Detected language: ${this.currentLanguage}`);
             
             // 加载翻译文件
             await this.loadTranslations(this.currentLanguage);
+            console.log(`📄 Translations loaded for: ${this.currentLanguage}`);
             
             // 应用翻译
             this.applyTranslations();
+            console.log('🎨 Translations applied to DOM');
             
             // 更新HTML语言属性
             this.updateHtmlLang();
+            console.log('🔗 HTML lang attribute updated');
             
             // 初始化语言切换器
             this.initLanguageSelector();
+            console.log('🎛️ Language selector initialized');
             
-            console.log(`✅ i18n initialized with language: ${this.currentLanguage}`);
+            console.log(`✅ i18n initialized successfully with language: ${this.currentLanguage}`);
+            
+            // 添加调试信息到控制台
+            this.debugInfo();
+            
         } catch (error) {
             console.error('❌ i18n initialization failed:', error);
+            console.error('Stack trace:', error.stack);
+            
             // 使用默认语言作为后备
             if (this.currentLanguage !== this.fallbackLang) {
+                console.log(`🔄 Falling back to default language: ${this.fallbackLang}`);
                 await this.switchLanguage(this.fallbackLang);
             }
         }
+    }
+
+    /**
+     * 调试信息
+     */
+    debugInfo() {
+        console.log('🐛 I18n Debug Info:', {
+            currentLanguage: this.currentLanguage,
+            supportedLanguages: Object.keys(this.supportedLanguages),
+            translationsLoaded: !!this.translations,
+            languageBtn: !!document.getElementById('languageBtn'),
+            languageDropdown: !!document.getElementById('languageDropdown'),
+            languageOptions: document.querySelectorAll('.language-option').length
+        });
     }
 
     /**
@@ -341,99 +369,112 @@ class I18nManager {
      * 初始化语言选择器
      */
     initLanguageSelector() {
-        // 检查页面中是否已有语言选择器
-        const existingButton = document.getElementById('languageBtn');
-        const existingDropdown = document.getElementById('languageDropdown');
+        console.log('🎛️ Initializing language selector...');
         
-        if (existingButton && existingDropdown) {
-            // 使用现有的语言选择器
-            this.bindExistingLanguageSelectorEvents();
-            this.updateLanguageSelectorDisplay();
-        } else {
-            // 创建新的语言选择器（向后兼容）
-            const languageSelector = this.createLanguageSelector();
-            document.body.appendChild(languageSelector);
-            this.bindLanguageSelectorEvents();
-        }
+        // 使用微延迟确保DOM完全加载
+        setTimeout(() => {
+            // 检查页面中是否已有语言选择器
+            const existingButton = document.getElementById('languageBtn');
+            const existingDropdown = document.getElementById('languageDropdown');
+            
+            console.log('🔍 Language selector elements check:', {
+                button: !!existingButton,
+                dropdown: !!existingDropdown,
+                buttonId: existingButton?.id,
+                dropdownId: existingDropdown?.id
+            });
+            
+            if (existingButton && existingDropdown) {
+                console.log('✅ Using existing language selector');
+                // 使用现有的语言选择器
+                this.bindExistingLanguageSelectorEvents();
+                this.updateLanguageSelectorDisplay();
+            } else {
+                console.log('⚠️ Creating new language selector');
+                // 创建新的语言选择器（向后兼容）
+                const languageSelector = this.createLanguageSelector();
+                document.body.appendChild(languageSelector);
+                this.bindLanguageSelectorEvents();
+            }
+        }, 50);
     }
 
     /**
      * 绑定现有语言选择器的事件
      */
     bindExistingLanguageSelectorEvents() {
-        console.log('🔧 bindExistingLanguageSelectorEvents called');
+        console.log('🔧 Starting bindExistingLanguageSelectorEvents');
         
-        const languageBtn = document.getElementById('languageBtn');
-        const dropdown = document.getElementById('languageDropdown');
+        // 移除之前可能存在的事件监听器
+        const existingBtn = document.getElementById('languageBtn');
+        const existingDropdown = document.getElementById('languageDropdown');
         
-        console.log('🔍 Element search results:', {
-            languageBtn: !!languageBtn,
-            dropdown: !!dropdown,
-            btnId: languageBtn?.id,
-            dropdownId: dropdown?.id
-        });
-        
-        if (!languageBtn || !dropdown) {
-            console.error('❌ Language selector elements not found');
-            console.error('❌ languageBtn:', languageBtn);
-            console.error('❌ dropdown:', dropdown);
+        if (!existingBtn || !existingDropdown) {
+            console.error('❌ Language selector elements not found:', {
+                btn: !!existingBtn,
+                dropdown: !!existingDropdown
+            });
             return;
         }
         
+        // 克隆按钮以移除所有旧的事件监听器
+        const newBtn = existingBtn.cloneNode(true);
+        existingBtn.parentNode.replaceChild(newBtn, existingBtn);
+        
+        const dropdown = document.getElementById('languageDropdown'); // 重新获取
         const options = dropdown.querySelectorAll('.language-option');
         
-        console.log(`🔍 Found ${options.length} language options`);
+        console.log(`� Found ${options.length} language options`);
         
-        if (options.length === 0) {
-            console.error('❌ No language options found');
-            return;
-        }
-        
-        console.log('🔗 Binding language selector events...');
-        
-        // 切换下拉菜单
-        languageBtn.addEventListener('click', (e) => {
-            console.log('🖱️ Language button click event fired!');
+        // 简化的点击事件处理
+        newBtn.onclick = (e) => {
+            console.log('🖱️ Language button clicked!');
             e.preventDefault();
             e.stopPropagation();
             
-            const wasOpen = dropdown.classList.contains('open');
+            const isOpen = dropdown.classList.contains('open');
             dropdown.classList.toggle('open');
-            const isNowOpen = dropdown.classList.contains('open');
             
-            console.log(`🔄 Dropdown toggled: ${wasOpen} -> ${isNowOpen}`);
-        });
+            console.log(`🔄 Dropdown ${isOpen ? 'closed' : 'opened'}`);
+        };
         
-        console.log('✅ Click event listener added to language button');
-        
-        // 点击外部关闭下拉菜单
-        document.addEventListener('click', (e) => {
-            if (!languageBtn.contains(e.target) && !dropdown.contains(e.target)) {
+        // 外部点击关闭
+        document.onclick = (e) => {
+            if (!newBtn.contains(e.target) && !dropdown.contains(e.target)) {
                 dropdown.classList.remove('open');
             }
-        });
+        };
         
-        // 语言选项点击事件
-        options.forEach(option => {
-            option.addEventListener('click', async (e) => {
+        // 语言选项事件
+        options.forEach((option, index) => {
+            option.onclick = async (e) => {
+                console.log(`🔄 Language option ${index} clicked`);
                 e.preventDefault();
                 e.stopPropagation();
                 
-                // 确保获取正确的data-lang属性，即使点击的是子元素
                 const lang = option.getAttribute('data-lang');
-                console.log(`🔄 Language option clicked: ${lang}`);
+                console.log(`🌍 Switching to: ${lang}`);
                 
                 if (lang && lang !== this.currentLanguage) {
-                    console.log(`🌍 Switching to language: ${lang}`);
-                    await this.setLanguage(lang);
-                    dropdown.classList.remove('open');
-                } else {
-                    console.log(`⚠️ Same language or invalid: current=${this.currentLanguage}, new=${lang}`);
+                    try {
+                        await this.setLanguage(lang);
+                        dropdown.classList.remove('open');
+                        console.log(`✅ Language switched successfully to: ${lang}`);
+                    } catch (error) {
+                        console.error('❌ Language switch failed:', error);
+                    }
                 }
-            });
+            };
         });
         
-        console.log('✅ Language selector events bound successfully');
+        console.log('✅ Language selector events bound with onclick handlers');
+    }    /**
+     * 重新绑定语言选择器（用于页面动态更新后）
+     */
+    rebindLanguageSelector() {
+        console.log('🔄 Rebinding language selector...');
+        this.bindExistingLanguageSelectorEvents();
+        this.updateLanguageSelectorDisplay();
     }
 
     /**
@@ -591,12 +632,21 @@ class I18nManager {
     }
 }
 
-// 全局i18n实例
-window.i18n = new I18nManager();
-
 // 页面加载完成后初始化
-document.addEventListener('DOMContentLoaded', () => {
-    window.i18n.init();
+document.addEventListener('DOMContentLoaded', async function() {
+    try {
+        // 创建全局i18n实例
+        if (!window.i18n) {
+            window.i18n = new I18nManager();
+        }
+        
+        // 初始化系统
+        await window.i18n.init();
+        
+        console.log('✅ I18n system initialized successfully');
+    } catch (error) {
+        console.error('❌ Failed to initialize i18n system:', error);
+    }
 });
 
 // 导出给其他模块使用

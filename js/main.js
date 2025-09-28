@@ -9,24 +9,14 @@ document.addEventListener('DOMContentLoaded', function() {
     initTouchInteractions();
     initPerformanceOptimizations();
     
-    // Initialize internationalization system
-    initI18n();
+    // I18n system is initialized automatically by i18n.js
+    // Wait for it to complete before binding additional events
+    setTimeout(() => {
+        if (window.i18n && typeof window.i18n.rebindLanguageSelector === 'function') {
+            window.i18n.rebindLanguageSelector();
+        }
+    }, 100);
 });
-
-// Initialize i18n system
-async function initI18n() {
-    try {
-        // Create i18n manager instance
-        window.i18n = new I18nManager();
-        
-        // Initialize the system
-        await window.i18n.init();
-        
-        console.log('I18n system initialized successfully');
-    } catch (error) {
-        console.error('Failed to initialize i18n system:', error);
-    }
-}
 
 // Mobile Navigation System
 function initMobileNavigation() {
