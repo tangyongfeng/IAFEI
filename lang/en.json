@@ -95,11 +95,89 @@
   "pages": {
     "contact": {
       "title": "Contact Us",
+      "subtitle": "Get in touch with IAFEI",
       "name": "Name",
       "email": "Email",
       "subject": "Subject",
       "message": "Message",
-      "send": "Send Message"
+      "send": "Send Message",
+      "generalInquiry": "General Inquiry",
+      "membership": "Membership",
+      "events": "Events",
+      "sendMessage": "Send Message",
+      "yourName": "Your Name",
+      "yourEmail": "Your Email"
+    },
+    "about": {
+      "title": "About IAFEI",
+      "subtitle": "International Association of Financial Executives Institutes",
+      "mission": {
+        "title": "Our Mission",
+        "content": "To advance the profession of financial management through education, networking, and the development of best practices among financial executives worldwide."
+      },
+      "values": {
+        "title": "Our Values",
+        "excellence": {
+          "title": "Excellence",
+          "content": "Committed to the highest standards of professional competence and ethical conduct."
+        },
+        "innovation": {
+          "title": "Innovation",
+          "content": "Fostering innovative approaches to financial challenges and emerging industry trends."
+        },
+        "collaboration": {
+          "title": "Collaboration",
+          "content": "Building global networks that enable knowledge sharing and professional growth."
+        }
+      },
+      "vision": {
+        "title": "Our Vision",
+        "content": "To be the premier global association for financial executives, setting the standard for professional excellence and ethical leadership in financial management worldwide."
+      },
+      "objectives": {
+        "title": "Our Objectives",
+        "education": "Promote professional education and continuous learning",
+        "networking": "Facilitate networking among financial executives globally",
+        "standards": "Develop and maintain professional standards",
+        "research": "Support research in financial management",
+        "advocacy": "Advocate for the financial management profession"
+      }
+    },
+    "news": {
+      "title": "News & Events",
+      "subtitle": "Stay updated with the latest developments",
+      "upcomingEvents": "Upcoming Events",
+      "latestNews": "Latest News",
+      "eventDetails": "Event Details",
+      "readFullArticle": "Read Full Article"
+    },
+    "members": {
+      "title": "Member Institutes",
+      "subtitle": "Our global network of financial executive organizations",
+      "joinUs": "Join Our Network",
+      "memberBenefits": "Member Benefits",
+      "applicationProcess": "Application Process"
+    },
+    "publications": {
+      "title": "Publications",
+      "subtitle": "Knowledge resources for financial professionals",
+      "quarterly": "IAFEI Quarterly",
+      "reports": "Research Reports",
+      "guidelines": "Professional Guidelines"
+    },
+    "history": {
+      "title": "Our History",
+      "subtitle": "The evolution of IAFEI since 1969",
+      "founded": "Founded in 1969",
+      "milestones": "Key Milestones"
+    },
+    "officers": {
+      "title": "Officers",
+      "subtitle": "Meet our leadership team",
+      "chairman": "Chairman",
+      "viceChairman": "Vice Chairman",
+      "secretary": "Secretary",
+      "treasurer": "Treasurer"
     }
   },
   "footer": {
@@ -131,7 +209,11 @@
     "menu": "Menu",
     "language": "Language",
     "backToAbout": "Back to About",
-    "backToHome": "Back to Home"
+    "backToHome": "Back to Home",
+    "readMore": "Read More",
+    "learnMore": "Learn More",
+    "contactUs": "Contact Us",
+    "success": "Success"
   },
   "bylaws": {
     "title": "IAFEI By-Laws",

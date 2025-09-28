@@ -95,11 +95,89 @@
   "pages": {
     "contact": {
       "title": "联系我们",
+      "subtitle": "与IAFEI取得联系",
       "name": "姓名",
       "email": "邮箱",
       "subject": "主题",
       "message": "留言",
-      "send": "发送消息"
+      "send": "发送消息",
+      "generalInquiry": "一般咨询",
+      "membership": "会员事务",
+      "events": "活动相关",
+      "sendMessage": "发送消息",
+      "yourName": "您的姓名",
+      "yourEmail": "您的邮箱"
+    },
+    "about": {
+      "title": "关于IAFEI",
+      "subtitle": "国际财务总监协会联合会",
+      "mission": {
+        "title": "我们的使命",
+        "content": "通过教育、网络建设和最佳实践发展，推进全球财务管理专业发展。"
+      },
+      "values": {
+        "title": "我们的价值观",
+        "excellence": {
+          "title": "卓越",
+          "content": "致力于最高标准的专业能力和道德操守。"
+        },
+        "innovation": {
+          "title": "创新",
+          "content": "促进对财务挑战和新兴行业趋势的创新方法。"
+        },
+        "collaboration": {
+          "title": "合作",
+          "content": "构建全球网络，促进知识分享和专业成长。"
+        }
+      },
+      "vision": {
+        "title": "我们的愿景",
+        "content": "成为财务高管的全球领先协会，为全球财务管理的专业卓越和道德领导力制定标准。"
+      },
+      "objectives": {
+        "title": "我们的目标",
+        "education": "促进专业教育和持续学习",
+        "networking": "促进全球财务高管的网络建设",
+        "standards": "制定和维护专业标准",
+        "research": "支持财务管理研究",
+        "advocacy": "为财务管理专业进行倡导"
+      }
+    },
+    "news": {
+      "title": "新闻动态",
+      "subtitle": "了解最新发展动态",
+      "upcomingEvents": "即将举行的活动",
+      "latestNews": "最新新闻",
+      "eventDetails": "活动详情",
+      "readFullArticle": "阅读全文"
+    },
+    "members": {
+      "title": "成员机构",
+      "subtitle": "我们的全球财务高管组织网络",
+      "joinUs": "加入我们的网络",
+      "memberBenefits": "会员权益",
+      "applicationProcess": "申请流程"
+    },
+    "publications": {
+      "title": "出版物",
+      "subtitle": "面向财务专业人士的知识资源",
+      "quarterly": "IAFEI季刊",
+      "reports": "研究报告",
+      "guidelines": "专业指导"
+    },
+    "history": {
+      "title": "我们的历史",
+      "subtitle": "IAFEI自1969年以来的发展历程",
+      "founded": "成立于1969年",
+      "milestones": "重要里程碑"
+    },
+    "officers": {
+      "title": "执行官员",
+      "subtitle": "认识我们的领导团队",
+      "chairman": "主席",
+      "viceChairman": "副主席",
+      "secretary": "秘书",
+      "treasurer": "财务主管"
     }
   },
   "footer": {
